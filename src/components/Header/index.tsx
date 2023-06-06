@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { AiOutlinePhone } from "react-icons/ai";
 import { FaInstagram, FaFacebookSquare, FaEnvelope } from "react-icons/fa";
 
@@ -13,15 +14,15 @@ export function Header() {
         </nav>
       </div>
       <div className="flex border text-brown-color p-3 justify-around">
-        <div>
+        <Link href='/'>
           <h1 className="text-4xl pt-3">Grolet Patisserie</h1>
           <h2>SABORES QUE ENCANTAM, MOMENTOS QUE FICAM</h2>
-        </div>
+        </Link>
         <nav className="flex w-2/5 justify-between items-center text-sm">
-          <p>ABOUT</p>
-          <p>RECIPES</p>
-          <p>PROCESS</p>
-          <p>CONTACT</p>
+          <Link href='/about'>ABOUT</Link>
+          <Link href='/recipes'>RECIPES</Link>
+          <Link href='/preocess'>PROCESS</Link>
+          <Link href='/contact'>CONTACT</Link>
           <button className="rounded-full px-5 border border-brown-color">
             SIGN IN/ REGISTER
           </button>
