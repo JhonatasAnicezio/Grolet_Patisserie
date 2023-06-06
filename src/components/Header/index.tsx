@@ -21,7 +21,7 @@ export function Header() {
         <nav className="flex w-2/5 justify-between items-center text-sm">
           <Link href='/about'>ABOUT</Link>
           <Link href='/recipes'>RECIPES</Link>
-          <Link href='/preocess'>PROCESS</Link>
+          <Link href='/process'>PROCESS</Link>
           <Link href='/contact'>CONTACT</Link>
           <button className="rounded-full px-5 border border-brown-color">
             SIGN IN/ REGISTER
