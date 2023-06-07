@@ -2,13 +2,13 @@ import { BsFillTelephoneFill, BsFillEnvelopeFill, BsFacebook, BsInstagram } from
 
 export function Footer() {
   return (
-    <footer className="flex flex-col items-center relative">
+    <footer className="flex flex-col items-center text-brown-color relative">
       <div className="flex justify-center p-24 bg-gray-200 h-banner">
         <div className="flex flex-col gap-8 items-start p-8">
-          <h2 className="text-4xl w-full py-3 border-b border-brown-color">Dedicated to our clients</h2>
+          <h2 className="text-4xl w-full py-3 border-b border-brown-color">Dedicado aos nossos clientes</h2>
           <p className="text-sm font-normal">Como uma patisserie dedicada em criar experiências únicas, estamos comprometidos em fornecer a você, nosso cliente, resultados deliciosos e surpreendentes. Temos orgulho em trabalhar de perto com nossos clientes para entender suas preferências e necessidades culinárias, entregando resultados saborosos em cada criação.</p>
           <button className="px-10 py-1 rounded-full text-sm bg-brown-color text-white">
-            LEARN MORE ABOUT OUR TEAM
+            SAIBA MAIS SOBRE NOSSA EQUIPE
           </button>
         </div>
         <img src="/cedric-dedicated.webp" className="w-96 h-80" />
@@ -19,13 +19,13 @@ export function Footer() {
           <p>SABORES QUE ENCANTAM , MOMENTOS QUE FICAM</p>
         </div>
         <div className="flex gap-5 p-5">
-          <p>Cathie Catalano Realtor® and Carly Catalano Morin Realtor® are licensed Realtors in Medicine Hat, fully committed to providing reliable and professional service to clients buying and selling homes. If you are new to Medicine Hat or an existing resident, contact Cathie and Carly for all your real estate needs.</p>
+          <p>GroletPatisserie®  é uma patisserie de renome, oferecendo criações únicas e saborosas. Com um compromisso total com a excelência, estamos prontos para atender às suas necessidades de confeitaria. Seja você um apaixonado por doces ou um conhecedor exigente, conte com a GroletPatisserie®  para uma experiência gastronômica inesquecível.</p>
           <nav className="flex flex-col gap-2">
             <p className="border-b border-white">HOME</p>
-            <p className="border-b border-white">ABOUT</p>
-            <p className="border-b border-white">PROCESS</p>
-            <p className="border-b border-white">LISTINGS</p>
-            <p className="border-b border-white">CONTACT</p>
+            <p className="border-b border-white">SOBRE</p>
+            <p className="border-b border-white">PROCESSO</p>
+            <p className="border-b border-white">RECEITAS</p>
+            <p className="border-b border-white">CONTATO</p>
           </nav>
           <ul className="flex flex-col">
             <li className="flex p-1 gap-1 items-center"><BsFillTelephoneFill />+55 (16)99305-2849</li>
@@ -39,8 +39,8 @@ export function Footer() {
         <h3 className="text-3xl">Nós estamos aqui para te ajudar</h3>
         <p className="text-center  text-sm">Para garantir a comodidade de nossos clientes, a Grolet Patisserie disponibiliza um serviço de entrega ágil e eficiente em toda a cidade, com horários flexíveis e o cuidado necessário para que nossas delícias cheguem até você com a qualidade e o frescor que merece.</p>
         <div className="flex w-full justify-around">
-          <button className="text-xs rounded-full py-1 px-32 border border-brown-color">
-            MY PROCESS
+          <button className="text-xs rounded-full py-1 px-28 border border-brown-color">
+            NOSSO PROCESSO
           </button>
           <button className="text-xs rounded-full py-1 px-20 border border-brown-color">
             AGENDE UMA CONSULTA GRATIS

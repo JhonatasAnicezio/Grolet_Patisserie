@@ -4,11 +4,11 @@ export default function About() {
       <div className="flex py-16 w-11/12 justify-evenly">
         <img className="w-2/5 pt-10 h-96" src="/masterclass.webp" alt="Descrição da imagem" />
         <div className="flex flex-col w-2/5 gap-5">
-          <h1 className="text-5xl">Your real estate partners</h1>
-          <h3>ABOUT CATHIE AND CARLY</h3>
-          <div className="flex flex-col gap-2">
-            <p className="text-sm">Mother-Daughter team Cathie and Carly share a passion for real estate. Cathie has been a licensed Realtor® in the City of Medicine Hat and surrounding areas since 2003. Carly joined her as a licensed Realtor® in 2022 to extend their reliable and professional services.</p>
-            <p className="text-sm">Buying a home is a big undertaking - we use our experience to guide you through the real estate process and ensure every detail is accounted for. As your trusted real estate partners, we'll work to find your dream home and make the process easy to understand. Whether you’re new to Medicine Hat, or already a part of our community, get in touch to see how we can help with all your real estate needs.</p>
+          <h1 className="text-6xl">Nossos confeiteros</h1>
+          <h3>SOBRE CEDRIC E SEU TIME DE CONFEITEIROS</h3>
+          <div className="flex flex-col gap-2 text-xs">
+            <p>Cedric Grolet lidera uma equipe de talentosos chefs confeiteiros apaixonados por criar obras-primas gastronômicas. Com habilidades e expertise únicas, cada membro da equipe contribui para a excelência e originalidade das criações da Grolet Patisserie. Dos habilidosos padeiros aos especialistas em decoração, cada um desempenha um papel fundamental na entrega de produtos que encantam os paladares e os olhos dos clientes.</p>
+            <p>O time da Grolet Patisserie compartilha um compromisso com a inovação e a busca contínua pela excelência. Eles estão sempre atualizados com as últimas tendências e técnicas no mundo da confeitaria, permitindo que criem sobremesas incríveis e exclusivas. Com trabalho em equipe, criatividade e atenção meticulosa aos detalhes, o time da Grolet Patisserie está dedicado a proporcionar uma experiência gastronômica excepcional para seus clientes, transformando cada doce em uma verdadeira obra de arte.</p>
           </div>
         </div>
       </div>
@@ -20,17 +20,17 @@ export default function About() {
         </div>
       </div>
       <div className="flex flex-col p-16 gap-2 items-center text-center bg-white">
-        <h2 className="text-5xl font-light">Expertise in the Medicine Hat Market</h2>
-        <h3 className="text-xl">LET US HELP YOU REACH YOUR REAL ESTATE GOALS</h3>
-        <p className="text-sm px-32">Whether you are buying for the first time, or downsizing for retirement, our years of experience in the Medicine Hat real estate market have given us a wealth of knowledge about all kinds of real estate needs.</p>
-        <div className="flex text-black text-3xl py-10 w-5/6">
-          <p className="border-r py-10 px-5 border-black">Moving to Medicine Hat</p>
-          <p className="border-r py-10 px-5 border-black">First Time Buyers</p>
-          <p className="border-r py-10 px-5 border-black">Downsizing for Retirement</p>
-          <p className="py-10 px-5">Finding your Dream Home</p>
+        <h2 className="text-5xl font-light">Expertise no mundo Gastronômico</h2>
+        <h3 className="text-xl">DEIXE-NOS AJUDAR VOCÊ A ALCANÇAR SEUS OBJETIVOS GASTRONÔMICOS</h3>
+        <p className="text-sm px-32">Com uma equipe de renomados chefs confeiteiros liderada por Cedric Grolet, garantimos oferecer uma experiência única e deliciosa. Nossa expertise nos permite criar doces e bolos personalizados para todas as ocasiões, tornando seus momentos especiais ainda mais saborosos.</p>
+        <div className="flex text-black text-xl py-10 w-5/6">
+          <p className="border-r py-10 px-5 border-black">Descubra a Delícia da Grolet Patisserie</p>
+          <p className="border-r py-10 px-5 border-black">Saboreie Nossas Delícias pela Primeira Vez</p>
+          <p className="border-r py-10 px-5 border-black">Uma Experiência Deliciosa para Cada Ocasião</p>
+          <p className="py-10 px-5">Encante-se com os Doces dos Seus Sonhos na Grolet Patisserie</p>
         </div>
         <button className="bg-brown-color text-white rounded-full py-0.5 px-20">
-          LEARN MORE ABOUT OUR PROCESS
+          SAIBA MAIS SOBRE NOSSO PROCESSO
         </button>
       </div>
     </main>
