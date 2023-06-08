@@ -6,11 +6,17 @@ export function Header() {
   return (
     <header>
       <div className="flex justify-between items-center text-base px-16 py-1 bg-brown-color text-white">
-        <div className="flex items-center"><AiOutlinePhone/>LIGUE AGORA XXXX-XXXX</div>
+        <div className="flex gap-1 items-center"><AiOutlinePhone/>LIGUE AGORA XXXX-XXXX</div>
         <nav className="flex w-28 text-xl justify-between">
-          <FaInstagram />
-          <FaFacebookSquare />
-          <FaEnvelope />
+          <Link target="blank" href='https://www.instagram.com/cedricgroletopera/'>
+            <FaInstagram />
+          </Link>
+          <Link target="blank" href='https://www.facebook.com/cedricgrolet'>
+            <FaFacebookSquare />
+          </Link>
+          <Link target="blank" href='mailto:jhonatasanic@hotmail.com'>
+            <FaEnvelope />
+          </Link>
         </nav>
       </div>
       <div className="flex border text-brown-color p-3 justify-around">

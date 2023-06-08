@@ -1,5 +1,6 @@
 import { BsChatLeftDots, BsHouse } from "react-icons/bs";
 import { BiCake } from "react-icons/bi";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -11,9 +12,9 @@ export default function Home() {
           <h2 className="text-3xl p-1 border-b-2 border-brown-color">Saboreie a arte da confeitaria francesa em cada mordida</h2>
           <p className="p-3">Bem-vindo(a) à Grolet Patisserie</p>
           <div className="py-2 px-5">
-            <button className="px-6 text-sm text-white bg-brown-color rounded-full">
+            <Link href='/about' className="px-6 py-0.5 text-sm text-white bg-brown-color rounded-full">
               NOSSO TIME
-            </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -21,7 +22,9 @@ export default function Home() {
         <div className="flex-col flex gap-3 items-center justify-center rounded-3xl text-center w-4/5 h-44 text-brown-color border border-brown-color">
           <h2 className="text-5xl font-light">Você cozinha?</h2>
           <h3 className="text-base">Experimente nossos doces artesanais exclusivos hoje mesmo</h3>
-          <button className="bg-brown-color text-white px-12 rounded-full">EXPLORE NOSSAS RECEITAS</button>
+          <Link href='/recipes' className="bg-brown-color text-white py-0.5 px-12 rounded-full">
+            EXPLORE NOSSAS RECEITAS
+          </Link>
         </div>
       </div>
       <div className="flex flex-col items-center justify-center bg-cover h-banner" style={{ backgroundImage: "url('/le-meurice-1.webp')" }}>

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function About() {
   return (
     <main className="flex flex-col items-center text-brown-color">
@@ -29,9 +31,9 @@ export default function About() {
           <p className="border-r py-10 px-5 border-black">Uma Experiência Deliciosa para Cada Ocasião</p>
           <p className="py-10 px-5">Encante-se com os Doces dos Seus Sonhos na Grolet Patisserie</p>
         </div>
-        <button className="bg-brown-color text-white rounded-full py-0.5 px-20">
+        <Link href='/process' className="bg-brown-color text-white rounded-full py-0.5 px-20">
           SAIBA MAIS SOBRE NOSSO PROCESSO
-        </button>
+        </Link>
       </div>
     </main>
   )

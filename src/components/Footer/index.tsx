@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { BsFillTelephoneFill, BsFillEnvelopeFill, BsFacebook, BsInstagram } from "react-icons/bs";
 
 export function Footer() {
@@ -7,9 +8,9 @@ export function Footer() {
         <div className="flex flex-col gap-8 items-start p-8">
           <h2 className="text-4xl w-full py-3 border-b border-brown-color">Dedicado aos nossos clientes</h2>
           <p className="text-sm font-normal">Como uma patisserie dedicada em criar experiências únicas, estamos comprometidos em fornecer a você, nosso cliente, resultados deliciosos e surpreendentes. Temos orgulho em trabalhar de perto com nossos clientes para entender suas preferências e necessidades culinárias, entregando resultados saborosos em cada criação.</p>
-          <button className="px-10 py-1 rounded-full text-sm bg-brown-color text-white">
+          <Link href='/about' className="px-10 py-1 rounded-full text-sm bg-brown-color text-white">
             SAIBA MAIS SOBRE NOSSA EQUIPE
-          </button>
+          </Link>
         </div>
         <img src="/cedric-dedicated.webp" className="w-96 h-80" />
       </div>
@@ -30,8 +31,12 @@ export function Footer() {
           <ul className="flex flex-col">
             <li className="flex p-1 gap-1 items-center"><BsFillTelephoneFill />+55 (16)99305-2849</li>
             <li className="flex p-1 gap-1 items-center"><BsFillEnvelopeFill />jhonatasanic@hotmail.com</li>
-            <li className="flex p-1 gap-1 items-center"><BsFacebook />Cedric Grolet</li>
-            <li className="flex p-1 gap-1 items-center"><BsInstagram />@cedricgrolet</li>
+            <Link target="blank" href='https://www.facebook.com/cedricgrolet'>
+              <li className="flex p-1 gap-1 items-center"><BsFacebook />Cedric Grolet</li>
+            </Link>
+            <Link target="blank" href='https://www.instagram.com/cedricgroletopera/'>
+              <li className="flex p-1 gap-1 items-center"><BsInstagram />@cedricgrolet</li>
+            </Link>
           </ul>
         </div>
       </div>
@@ -39,12 +44,12 @@ export function Footer() {
         <h3 className="text-3xl">Nós estamos aqui para te ajudar</h3>
         <p className="text-center  text-sm">Para garantir a comodidade de nossos clientes, a Grolet Patisserie disponibiliza um serviço de entrega ágil e eficiente em toda a cidade, com horários flexíveis e o cuidado necessário para que nossas delícias cheguem até você com a qualidade e o frescor que merece.</p>
         <div className="flex w-full justify-around">
-          <button className="text-xs rounded-full py-1 px-28 border border-brown-color">
+          <Link href='/process' className="text-xs rounded-full py-1 px-28 border border-brown-color">
             NOSSO PROCESSO
-          </button>
-          <button className="text-xs rounded-full py-1 px-20 border border-brown-color">
+          </Link>
+          <Link href='/contact' className="text-xs rounded-full py-1 px-20 border border-brown-color">
             AGENDE UMA CONSULTA GRATIS
-          </button>
+          </Link>
         </div>
       </div>
       <div className="flex justify-start px-10 py-1 text-sm w-full bg-gray-200">

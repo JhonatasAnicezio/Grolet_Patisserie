@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Process() {
   return (
     <main className="flex flex-col text-brown-color items-center justify-center">
@@ -5,9 +7,9 @@ export default function Process() {
         <h1 className="text-6xl font-light">Simplificando o nosso processo</h1>
         <h2 className="text-xl">ENTENDA O NOSSO PROCESSO DESDE A ESCOLHA DOS NOSSOS PRODUTOS</h2>
         <p className="text-xs w-11/12">Escolher um serviço especializado para o seu evento é crucial. Nossa equipe de profissionais experientes está pronta para ajudá-lo em todas as etapas, desde a concepção até a execução, garantindo que cada detalhe seja cuidadosamente planejado e personalizado de acordo com suas necessidades. Conte conosco para criar uma experiência memorável e de sucesso para o seu evento.</p>
-        <button className="px-10 rounded-full border border-brown-color">
+        <Link href='/contact' className="px-10 rounded-full border border-brown-color">
           AGENDE UMA CONSULTA
-        </button>
+        </Link>
       </div>
       <div className="flex py-10 w-11/12">
         <div className="flex flex-col p-6 gap-3">
