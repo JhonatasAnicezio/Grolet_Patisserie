@@ -1,5 +1,7 @@
 export default function Recipes() {
   return (
-    <div>Receitas</div>
+    <main className="pt-space-header">
+      Receitas
+    </main>
   )
 ;}

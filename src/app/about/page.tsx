@@ -1,8 +1,9 @@
+import { Testimonials } from "@/components/Testimonials";
 import Link from "next/link";
 
 export default function About() {
   return (
-    <main className="flex flex-col items-center text-brown-color">
+    <main className="flex flex-col items-center text-brown-350 pt-space-header">
       <div className="flex py-16 w-11/12 justify-evenly">
         <img className="w-2/5 pt-10 h-96" src="/masterclass.webp" alt="Descrição da imagem" />
         <div className="flex flex-col w-2/5 gap-5">
@@ -15,11 +16,7 @@ export default function About() {
         </div>
       </div>
       <div className="flex flex-col items-center justify-center bg-cover w-full h-banner" style={{ backgroundImage: "url('/le-meurice-1.webp')" }}>
-        <div className="flex flex-col p-5 gap-10 rounded-2xl items-center text-center w-5/6 bg-white">
-          <h2 className="text-2xl pb-5 w-7/12 border-b border-black">Clientes</h2>
-          <p className="text-3xl px-10">Os doces dessa patisserie são simplesmente divinos! A variedade de opções é impressionante e a qualidade dos ingredientes é evidente em cada mordida. Mal posso esperar para experimentar mais sabores!</p>
-          <h3 className="text-xl">Amanda</h3>
-        </div>
+        <Testimonials />
       </div>
       <div className="flex flex-col p-16 gap-2 items-center text-center bg-white">
         <h2 className="text-5xl font-light">Expertise no mundo Gastronômico</h2>
@@ -31,7 +28,7 @@ export default function About() {
           <p className="border-r py-10 px-5 border-black">Uma Experiência Deliciosa para Cada Ocasião</p>
           <p className="py-10 px-5">Encante-se com os Doces dos Seus Sonhos na Grolet Patisserie</p>
         </div>
-        <Link href='/process' className="bg-brown-color text-white rounded-full py-0.5 px-20">
+        <Link href='/process' className="transition duration-500 bg-brown-350 text-white hover:bg-brown-900 rounded-full py-0.5 px-20">
           SAIBA MAIS SOBRE NOSSO PROCESSO
         </Link>
       </div>
