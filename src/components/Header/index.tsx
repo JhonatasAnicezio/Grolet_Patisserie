@@ -2,6 +2,7 @@ import Link from "next/link";
 import { AiOutlinePhone } from "react-icons/ai";
 import { FaInstagram, FaFacebookSquare, FaEnvelope } from "react-icons/fa";
 import { LinkHeader } from "./components/link";
+import { Button } from "./components/button";
 
 export function Header() {
   return (
@@ -33,9 +34,7 @@ export function Header() {
           <LinkHeader name="RECEITAS" route="/recipes" />
           <LinkHeader name="PROCESSO" route="/process" />
           <LinkHeader name="CONTATO" route="/contact" />
-          <button className="transition duration-500 rounded-full py-1 px-5 border border-gray-500 hover:bg-brown-350 hover:text-white hover:border-brown-350">
-            ENTRAR / CADASTRO
-          </button>
+          <Button />
         </nav>
       </div>
     </header>
