@@ -13,7 +13,7 @@ export default function Home() {
           <h2 className="text-3xl p-1 border-b-2 border-brown-350">Saboreie a arte da confeitaria francesa em cada mordida</h2>
           <p className="p-3">Bem-vindo(a) à Grolet Patisserie</p>
           <div className="py-2 px-5">
-            <Link href='/about' className="px-6 py-0.5 text-sm transition duration-500 text-white hover:bg-brown-900 bg-brown-350 rounded-full hover:bg-bro">
+            <Link href='/about' className="px-8 py-1 text-sm transition duration-500 text-white hover:bg-brown-900 bg-brown-350 rounded-full hover:bg-bro">
               NOSSO TIME
             </Link>
           </div>
