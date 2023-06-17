@@ -1,6 +1,6 @@
 import { z } from "zod"
 
-const phoneRegex = /^\d{2}\d{4,5}\d{4}$/;
+const phoneRegex = /^\(\d{2}\)\d{9}$/;
 
 export const sendMessageSchema = z.object({
   name: z.string().nonempty({
@@ -29,7 +29,7 @@ export const sendMessageSchema = z.object({
   phone: z.string().nonempty({
     message: 'O telefone é obrigatório',
   }).refine((value) => phoneRegex.test(value), {
-    message: 'Número de telefone inválido',
+    message: 'Siga o formato (20)999999999',
   }),
   message: z.string().nonempty({
     message: 'A mensagem é obrigatória',
