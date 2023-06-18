@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Message from '../../components/Form/Message';
+import FormMessage from '../../components/Form/FormMessage';
 import { BsFacebook, BsFillEnvelopeFill, BsFillTelephoneFill, BsInstagram } from "react-icons/bs";
 
 export default function Contact() {
@@ -48,7 +48,7 @@ export default function Contact() {
           </div>
         </div>
       </div>
-      <Message />
+      <FormMessage />
       <div className="flex flex-col items-center justify-center bg-cover h-banner w-full" style={{ backgroundImage: "url('/frutas.webp')" }}>
         <div className="flex flex-col gap-5 p-11 items-center text-center text-brown-350 rounded-3xl w-11/12 bg-white">
           <h2 className="text-6xl font-light">Marque uma consulta gratuita</h2>
