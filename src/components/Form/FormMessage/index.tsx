@@ -4,7 +4,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { sendMessageData, sendMessageSchema } from './schema'
 import { Form } from '../index';
 
-export default function Message() {
+export default function FormMessage() {
 
   const createSendForm = useForm<sendMessageData>({
     resolver: zodResolver(sendMessageSchema),
@@ -12,7 +12,7 @@ export default function Message() {
 
   const {
     handleSubmit,
-    formState: { isSubmitting },
+    formState: { isSubmitting, errors },
   } = createSendForm;
 
   const consol = (data: sendMessageData) => {
@@ -24,17 +24,25 @@ export default function Message() {
       <form className='flex flex-col py-20 gap-3 justify-center items-center w-full'>
         <Form.Field className='flex gap-10 w-full justify-center'>
           <Form.Field className='w-2/5'>
-            <Form.Label>
-              Nome
-            </Form.Label>
+            <Form.Field className='flex justify-between items-center'>
+              <Form.Label>
+                Nome
+              </Form.Label>
+
+              {errors.name && <span className="text-red-500 text-xs">{errors.name.message}</span>}
+            </Form.Field>
 
             <Form.Input type='name' name='name' />
           </Form.Field>
 
           <Form.Field className='w-2/5'>
-            <Form.Label>
-              Sobrenome
-            </Form.Label>
+            <Form.Field className='flex justify-between items-center'>
+              <Form.Label>
+                Sobrenome
+              </Form.Label>
+
+              {errors.surname && <span className="text-red-500 text-xs">{errors.surname.message}</span>}
+            </Form.Field>
 
             <Form.Input type='surname' name='surname' />
           </Form.Field>
@@ -42,26 +50,38 @@ export default function Message() {
 
         <Form.Field className='flex gap-10 w-full justify-center'>
           <Form.Field className='w-2/5'>
-            <Form.Label>
-              Email
-            </Form.Label>
+            <Form.Field className='flex justify-between items-center'>
+              <Form.Label>
+                Email
+              </Form.Label>
+
+              {errors.email && <span className="text-red-500 text-xs">{errors.email.message}</span>}
+            </Form.Field>
 
             <Form.Input type='email' name='email' />
           </Form.Field>
 
           <Form.Field className='w-2/5'>
-            <Form.Label>
-              Telefone/Celular
-            </Form.Label>
+            <Form.Field className='flex justify-between items-center'>
+              <Form.Label>
+                Celular
+              </Form.Label>
+
+              {errors.phone && <span className="text-red-500 text-xs">{errors.phone.message}</span>}
+            </Form.Field>
 
             <Form.Input type='phone' name='phone' />
           </Form.Field>
         </Form.Field>
 
-        <Form.Field className='flex flex-col items-center w-10/12'>
-          <Form.Label>
-            Mensagem
-          </Form.Label>
+        <Form.Field className='flex flex-col w-10/12'>
+          <Form.Field className='flex justify-between items-center'>
+            <Form.Label>
+              Mensagem
+            </Form.Label>
+
+            {errors.message && <span className="text-red-500 text-xs">{errors.message.message}</span>}
+          </Form.Field>
 
           <Form.Textarea name='message'/>
         </Form.Field>

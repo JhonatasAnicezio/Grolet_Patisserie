@@ -5,7 +5,11 @@ import { loginData, loginSchema } from './schema'
 import { Form } from '../index';
 import Link from 'next/link';
 
-export default function Login() {
+interface propsLogin {
+  setIsOpen: (value: boolean) => void,
+}
+
+export default function FormLogin({ setIsOpen }: propsLogin) {
 
   const createLoginForm = useForm<loginData>({
     resolver: zodResolver(loginSchema),
@@ -13,7 +17,7 @@ export default function Login() {
 
   const {
     handleSubmit,
-    formState: { isSubmitting },
+    formState: { isSubmitting, errors },
   } = createLoginForm;
 
   const consol = (data: loginData) => {
@@ -24,17 +28,25 @@ export default function Login() {
     <FormProvider {...createLoginForm}>
       <form className='flex flex-col font-medium gap-3 justify-center items-center w-full'>
         <Form.Field className='w-full'>
-          <Form.Label>
-            Email
-          </Form.Label>
+          <Form.Field className='flex justify-between items-center'>
+            <Form.Label>
+              Email
+            </Form.Label>
+
+            {errors.email && <span className="text-red-500 text-xs">{errors.email.message}</span>}
+          </Form.Field>
 
           <Form.Input type='email' name='email' />
         </Form.Field>
 
         <Form.Field className='w-full'>
-          <Form.Label>
-            Password
-          </Form.Label>
+          <Form.Field className='flex justify-between items-center'>
+            <Form.Label>
+              Senha
+            </Form.Label>
+
+            {errors.password && <span className="text-red-500 text-xs">{errors.password.message}</span>}
+          </Form.Field>
 
           <Form.Input type='password' name='password' />
         </Form.Field>
@@ -51,7 +63,8 @@ export default function Login() {
           <p>Não possui uma conta ainda?</p>
           <Link
             href='/register'
-            className='transistion duration-500 px-5 py-0.5 rounded-full border border-brown-350 hover:bg-brown-350 hover:text-white'
+            onClick={() => setIsOpen(false)}
+            className='flex items-center transistion duration-500 px-5 py-0.5 rounded-full border border-brown-350 hover:bg-brown-350 hover:text-white'
           >
             REGISTRE-SE
           </Link>
