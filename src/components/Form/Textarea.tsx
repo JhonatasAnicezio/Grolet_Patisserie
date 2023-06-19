@@ -10,7 +10,7 @@ export function Textarea(props: TextareaProps) {
 
   return (
     <textarea
-      className='rounded-xl w-full h-32 px-2 py-1 border border-brown-350'
+      className='rounded-xl w-full h-20 px-2 py-1 border border-brown-350'
       id={props.name}
       {...register(props.name)}
       {...props}

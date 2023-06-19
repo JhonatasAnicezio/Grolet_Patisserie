@@ -11,7 +11,7 @@ export function Input(props: InputProps) {
   return (
     <input
       id={props.name}
-      className="rounded-xl w-full px-2 py-1 border border-brown-350"
+      className="rounded-xl w-full px-1 py-0.5 border border-brown-350"
       {...register(props.name)}
       {...props}
     />

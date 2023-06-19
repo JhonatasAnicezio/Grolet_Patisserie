@@ -21,7 +21,7 @@ export default function FormMessage() {
 
   return (
     <FormProvider {...createSendForm}>
-      <form className='flex flex-col py-20 gap-3 justify-center items-center w-full'>
+      <form className='flex flex-col py-10 gap-3 justify-center items-center w-11/12'>
         <Form.Field className='flex gap-10 w-full justify-center'>
           <Form.Field className='w-2/5'>
             <Form.Field className='flex justify-between items-center'>
@@ -91,7 +91,7 @@ export default function FormMessage() {
             type='button'
             disabled={isSubmitting}
             onClick={handleSubmit(consol)}
-            className='transition duration-500 rounded-full px-24 py-1 bg-brown-350 text-white hover:bg-brown-900'
+            className='transition duration-500 rounded-full text-xs px-24 py-1 bg-brown-350 text-white hover:bg-brown-900'
           >
             ENVIAR
           </button>
