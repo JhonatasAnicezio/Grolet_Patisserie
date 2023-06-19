@@ -29,7 +29,7 @@ export function Header() {
           <h1 className="text-3xl font-medium pt-3">Grolet Patisserie</h1>
           <h2 className="text-xs font-medium">SABORES QUE ENCANTAM, MOMENTOS QUE FICAM</h2>
         </Link>
-        <nav className="flex w-2/5 justify-between items-center font-semibold text-sm text-gray-500">
+        <nav className="flex gap-4 justify-between items-center font-medium text-xs text-gray-500">
           <LinkHeader name="SOBRE" route="/about" />
           <LinkHeader name="RECEITAS" route="/recipes" />
           <LinkHeader name="PROCESSO" route="/process" />
