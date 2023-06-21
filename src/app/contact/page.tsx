@@ -54,7 +54,7 @@ export default function Contact() {
           <h2 className="py-1 text-4xl font-normal">Marque uma consulta gratuita</h2>
           <h3 className="text-xs font-medium">NÃO SABE POR ONDE COMEÇAR? VAMOS CONVERSAR!</h3>
           <p className="px-20 text-xs">Agende uma consulta através do link abaixo para uma conversa de 15 minutos, onde discutiremos suas preferências, expectativas e como podemos criar delícias personalizadas para tornar seus momentos especiais ainda mais memoráveis.</p>
-          <button className="transition duration-500 text-xs px-12 py-1 rounded-full hover:bg-brown-900 bg-brown-350 text-white">AGENDE UMA CHAMADA AGORA</button>
+          <a href="tel:+5516993052849" className="transition duration-500 text-xs px-12 py-1 rounded-full hover:bg-brown-900 bg-brown-350 text-white">AGENDE UMA CHAMADA AGORA</a>
         </div>
       </div>
     </main>
