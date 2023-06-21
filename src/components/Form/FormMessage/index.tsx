@@ -3,6 +3,7 @@ import { FormProvider, useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { sendMessageData, sendMessageSchema } from './schema'
 import { Form } from '../index';
+import emailjs from '@emailjs/browser';
 
 export default function FormMessage() {
 
@@ -15,13 +16,17 @@ export default function FormMessage() {
     formState: { isSubmitting, errors },
   } = createSendForm;
 
-  const consol = (data: sendMessageData) => {
-    console.log(data);
+  const sendEmail = async (data: sendMessageData) => {
+    emailjs.send('service_kvcw4rn', 'template_ynvjdap', data, 'UfYG3UuB2GvepdFz0')
+      .then((response) => console.log(response.status));
   };
 
   return (
     <FormProvider {...createSendForm}>
-      <form className='flex flex-col py-10 gap-3 justify-center items-center w-11/12'>
+      <form
+        onSubmit={handleSubmit(sendEmail)}
+        className='flex flex-col py-10 gap-3 justify-center items-center w-11/12'
+      >
         <Form.Field className='flex gap-10 w-full justify-center'>
           <Form.Field className='w-2/5'>
             <Form.Field className='flex justify-between items-center'>
@@ -88,9 +93,8 @@ export default function FormMessage() {
 
         <Form.Field className='w-10/12 flex justify-end'>
           <button
-            type='button'
+            type='submit'
             disabled={isSubmitting}
-            onClick={handleSubmit(consol)}
             className='transition duration-500 rounded-full text-xs px-24 py-1 bg-brown-350 text-white hover:bg-brown-900'
           >
             ENVIAR
