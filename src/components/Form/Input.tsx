@@ -2,7 +2,8 @@ import { InputHTMLAttributes } from 'react';
 import { useFormContext } from 'react-hook-form';
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-  name: string
+  name: string,
+  loading: boolean,
 };
 
 export function Input(props: InputProps) {
@@ -11,7 +12,11 @@ export function Input(props: InputProps) {
   return (
     <input
       id={props.name}
-      className="rounded-xl w-full px-1 py-0.5 border border-brown-350"
+      className={`
+        w-full px-1 py-0.5 rounded-xl
+        ${props.loading ? 'bg-gray-300 border border-gray-300' : 'border border-brown-350'}
+      `}
+      disabled={props.loading}
       {...register(props.name)}
       {...props}
     />
