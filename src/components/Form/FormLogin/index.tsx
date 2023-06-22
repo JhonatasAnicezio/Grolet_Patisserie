@@ -36,7 +36,7 @@ export default function FormLogin({ setIsOpen }: propsLogin) {
             {errors.email && <span className="text-red-500 text-xs">{errors.email.message}</span>}
           </Form.Field>
 
-          <Form.Input type='email' name='email' />
+          <Form.Input loading={false} type='email' name='email' />
         </Form.Field>
 
         <Form.Field className='w-full'>
@@ -48,7 +48,7 @@ export default function FormLogin({ setIsOpen }: propsLogin) {
             {errors.password && <span className="text-red-500 text-xs">{errors.password.message}</span>}
           </Form.Field>
 
-          <Form.Input type='password' name='password' />
+          <Form.Input loading={false} type='password' name='password' />
         </Form.Field>
 
         <button

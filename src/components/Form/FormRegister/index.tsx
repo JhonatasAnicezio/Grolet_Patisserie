@@ -34,7 +34,7 @@ export function FormRegister() {
             {errors.name && <span className="text-red-500 text-xs">{errors.name.message}</span>}
           </Form.Field>
 
-          <Form.Input type='name' name='name' />
+          <Form.Input loading={false} type='name' name='name' />
         </Form.Field>
 
         <Form.Field className='w-full'>
@@ -46,7 +46,7 @@ export function FormRegister() {
             {errors.email && <span className="text-red-500 text-xs">{errors.email.message}</span>}
           </Form.Field>
 
-          <Form.Input type='email' name='email' />
+          <Form.Input loading={false} type='email' name='email' />
         </Form.Field>
 
         <Form.Field className='w-full'>
@@ -58,7 +58,7 @@ export function FormRegister() {
             {errors.phone && <span className="text-red-500 text-xs">{errors.phone.message}</span>}
           </Form.Field>
 
-          <Form.Input type='phone' name='phone' />
+          <Form.Input loading={false} type='phone' name='phone' />
         </Form.Field>
 
         <Form.Field className='w-full'>
@@ -70,7 +70,7 @@ export function FormRegister() {
             {errors.password && <span className="text-red-500 text-xs">{errors.password.message}</span>}
           </Form.Field>
 
-          <Form.Input type='password' name='password' />
+          <Form.Input loading={false} type='password' name='password' />
         </Form.Field>
 
         <button
