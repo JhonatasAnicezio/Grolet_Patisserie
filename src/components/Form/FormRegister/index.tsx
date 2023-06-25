@@ -4,9 +4,11 @@ import { FormProvider, useForm } from "react-hook-form"
 import { registerData, registerSchema } from "./schema"
 import { Form } from "..";
 import { Modal } from "@/components/Modal";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "@/context/AuthContext";
 
 export function FormRegister() {
+  const { register, invalid, setInvalid, isLoading } = useContext(AuthContext);
   const [isOpen, setIsOpen] = useState(false);
 
   const createRegisterForm = useForm<registerData>({
@@ -16,15 +18,21 @@ export function FormRegister() {
   const {
     handleSubmit,
     formState: { isSubmitting, errors },
+    reset,
   } = createRegisterForm;
 
-  const consol = (data: registerData) => {
-    console.log(data);
+  const createUser = async (data: registerData) => {
+    reset();
+    const result = await register(data);
+    console.log(result);
   };
 
   return (
     <FormProvider {...createRegisterForm}>
-      <form className="flex flex-col pb-20 gap-3 items-center w-7/12">
+      <form
+        onSubmit={handleSubmit(createUser)}
+        className="flex flex-col pb-20 gap-3 items-center w-7/12"
+      >
         <Form.Field className='w-full'>
           <Form.Field className='flex justify-between items-center'>
             <Form.Label>
@@ -34,7 +42,12 @@ export function FormRegister() {
             {errors.name && <span className="text-red-500 text-xs">{errors.name.message}</span>}
           </Form.Field>
 
-          <Form.Input loading={false} type='name' name='name' />
+          <Form.Input
+            loading={isLoading}
+            type='name'
+            name='name'
+            onClick={() => setInvalid({...invalid, isValidate: false})}
+          />
         </Form.Field>
 
         <Form.Field className='w-full'>
@@ -46,7 +59,12 @@ export function FormRegister() {
             {errors.email && <span className="text-red-500 text-xs">{errors.email.message}</span>}
           </Form.Field>
 
-          <Form.Input loading={false} type='email' name='email' />
+          <Form.Input
+            loading={isLoading}
+            type='email'
+            name='email'
+            onClick={() => setInvalid({...invalid, isValidate: false})}
+          />
         </Form.Field>
 
         <Form.Field className='w-full'>
@@ -58,7 +76,12 @@ export function FormRegister() {
             {errors.phone && <span className="text-red-500 text-xs">{errors.phone.message}</span>}
           </Form.Field>
 
-          <Form.Input loading={false} type='phone' name='phone' />
+          <Form.Input
+            loading={isLoading}
+            type='phone'
+            name='phone'
+            onClick={() => setInvalid({...invalid, isValidate: false})}
+          />
         </Form.Field>
 
         <Form.Field className='w-full'>
@@ -68,18 +91,23 @@ export function FormRegister() {
             </Form.Label>
 
             {errors.password && <span className="text-red-500 text-xs">{errors.password.message}</span>}
+            {invalid.isValidate && <span className="text-red-500 text-xs">{invalid.message}</span>}
           </Form.Field>
 
-          <Form.Input loading={false} type='password' name='password' />
+          <Form.Input
+            loading={isLoading}
+            type='password'
+            name='password'
+            onClick={() => setInvalid({...invalid, isValidate: false})}
+          />
         </Form.Field>
 
         <button
-          type='button'
+          type='submit'
           disabled={isSubmitting}
-          onClick={handleSubmit(consol)}
           className='w-3/4 py-1 font-medium transition duration-500 rounded-full bg-brown-350 text-white hover:bg-brown-900'
         >
-          Cadastra-se
+          {isLoading? 'Um momento...' : 'Cadastra-se'}
         </button>
 
         <Form.Field className='flex items-center gap-1 text-xs'>

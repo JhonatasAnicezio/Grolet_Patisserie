@@ -4,12 +4,15 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { loginData, loginSchema } from './schema'
 import { Form } from '../index';
 import Link from 'next/link';
+import { useContext } from 'react';
+import { AuthContext } from '@/context/AuthContext';
 
 interface propsLogin {
   setIsOpen: (value: boolean) => void,
 }
 
 export default function FormLogin({ setIsOpen }: propsLogin) {
+  const { singIn, invalid, setInvalid, isLoading } = useContext(AuthContext);
 
   const createLoginForm = useForm<loginData>({
     resolver: zodResolver(loginSchema),
@@ -18,15 +21,21 @@ export default function FormLogin({ setIsOpen }: propsLogin) {
   const {
     handleSubmit,
     formState: { isSubmitting, errors },
+    reset,
   } = createLoginForm;
 
-  const consol = (data: loginData) => {
-    console.log(data);
-  };
+  const login = async (data: loginData) => {
+    reset();
+    const result = await singIn(data);
+    setIsOpen(!result);
+  }
 
   return (
     <FormProvider {...createLoginForm}>
-      <form className='flex flex-col font-medium gap-3 justify-center items-center w-full'>
+      <form
+        onSubmit={handleSubmit(login)}
+        className='flex flex-col font-medium gap-3 justify-center items-center w-full'
+      >
         <Form.Field className='w-full'>
           <Form.Field className='flex justify-between items-center'>
             <Form.Label>
@@ -36,7 +45,12 @@ export default function FormLogin({ setIsOpen }: propsLogin) {
             {errors.email && <span className="text-red-500 text-xs">{errors.email.message}</span>}
           </Form.Field>
 
-          <Form.Input loading={false} type='email' name='email' />
+          <Form.Input
+            loading={isLoading}
+            type='email'
+            name='email'
+            onClick={() => setInvalid({...invalid, isValidate: false})}
+          />
         </Form.Field>
 
         <Form.Field className='w-full'>
@@ -46,18 +60,23 @@ export default function FormLogin({ setIsOpen }: propsLogin) {
             </Form.Label>
 
             {errors.password && <span className="text-red-500 text-xs">{errors.password.message}</span>}
+            {invalid.isValidate && <span className="text-red-500 text-xs">{invalid.message}</span>}
           </Form.Field>
 
-          <Form.Input loading={false} type='password' name='password' />
+          <Form.Input
+            loading={isLoading}
+            type='password'
+            name='password'
+            onClick={() => setInvalid({...invalid, isValidate: false})}
+          />
         </Form.Field>
 
         <button
-          type='button'
+          type='submit'
           disabled={isSubmitting}
-          onClick={handleSubmit(consol)}
           className='w-11/12 py-0.5 font-medium transition duration-500 rounded-full bg-brown-350 text-white hover:bg-brown-900'
         >
-          Iniciar sessão
+          {isLoading? 'Um momento...' : 'Iniciar sessão'}
         </button>
         <Form.Field className='flex items-center gap-1 text-xs'>
           <p>Não possui uma conta ainda?</p>

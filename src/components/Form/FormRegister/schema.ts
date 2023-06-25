@@ -27,6 +27,7 @@ export const registerSchema = z.object({
   }).refine((value) => phoneRegex.test(value), {
     message: 'Siga o formato (20)999999999',
   }),
+  role: z.unknown(),
 });
 
 export type registerData = z.infer<typeof registerSchema>;
