@@ -4,7 +4,7 @@ import { BsFillTelephoneFill, BsFillEnvelopeFill, BsFacebook, BsInstagram } from
 export function Footer() {
   return (
     <footer className="flex flex-col items-center text-brown-350 relative">
-      <div className="flex w-10/12 justify-center items-center py-28">
+      <div className="flex w-10/12 justify-center items-center py-36">
         <div className="flex flex-col w-2/4 gap-5 items-start p-8">
           <h2 className="text-3xl w-full py-2 border-b border-gray-400">Dedicado aos nossos clientes</h2>
           <p className="text-xs font-normal">Como uma patisserie dedicada em criar experiências únicas, estamos comprometidos em fornecer a você, nosso cliente, resultados deliciosos e surpreendentes. Temos orgulho em trabalhar de perto com nossos clientes para entender suas preferências e necessidades culinárias, entregando resultados saborosos em cada criação.</p>
@@ -12,7 +12,7 @@ export function Footer() {
             SAIBA MAIS SOBRE NOSSA EQUIPE
           </Link>
         </div>
-        <img src="/cedric-dedicated.webp" className="w-[440px] h-96 " />
+        <img src="/cedric-dedicated.webp" className="w-[480px] h-80" />
       </div>
       <div className="flex flex-col text-white py-28 px-36 justify-center items-center w-full bg-brown-350">
         <div className="w-full py-3 border-b border-white">
