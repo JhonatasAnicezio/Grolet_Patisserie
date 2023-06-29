@@ -2,24 +2,29 @@
 import { ReactNode, createContext, useState } from 'react';
 import { setCookie, parseCookies } from 'nookies';
 import { useRouter } from 'next/navigation';
-import { User } from '@/interface/IUser';
+import { ResponsePost, User } from '@/interface/IUser';
 import { registerData } from '@/components/Form/FormRegister/schema';
 import { loginData } from '@/components/Form/FormLogin/schema';
-import { postLogin, postRegister } from '@/services/user';
+import { getUser } from '@/services/user';
+import { useQuery } from 'react-query';
 
 type invalid = {
   isValidate: boolean,
   message: string,
 }
 
+type RequestData = registerData | loginData;
+
+type Action = (data: RequestData) => Promise<string | ResponsePost>;
+
 interface AuthContext {
-  singIn: (data: loginData) => Promise<boolean>,
-  register: (data: registerData) => Promise<boolean>,
-  user: User | null,
-  setUser: (data: User | null) => void,
+  postUser: (requestData: RequestData, action: Action) => Promise<boolean>,
   invalid: invalid,
   setInvalid: (value: invalid) => void,
   isLoading: boolean,
+  isFetching: boolean,
+  user: User | undefined,
+  token: string,
 }
 
 export const AuthContext = createContext({} as AuthContext);
@@ -31,93 +36,50 @@ type Prop = {
 export function AuthProvider({ children }: Prop) {
   const router = useRouter();
 
-  const [user, setUser] = useState<User | null>(null);
+  const [isLoading, setLoading] = useState(false);
 
   const [invalid, setInvalid] = useState({
     isValidate: false,
     message: '',
   });
 
-  const [isLoading, setLoading] = useState(false);
-
   const {'nextAuth.token': token} = parseCookies();
 
-  const redirect = () => {
-    if(token) {
+  const { data: user, isFetching } = useQuery(['profile', token], async () => {
+    const user = await getUser(token);
+
+    return user;
+  });
+
+  const postUser = async (requestData: RequestData, action: Action) => {
+    setLoading(true);
+
+    const response = await action(requestData);
+
+    if (typeof response === 'object') {
+      setCookie(undefined, 'nextAuth.token', response.token, {
+        maxAge: 60 * 60 * 48, // 2 dias
+      });
       router.push('/');
-    }
-  }
-
-  async function singIn({ email, password }: loginData) {
-    setLoading(true);
-
-    const responseLogin = await postLogin({email, password});
-
-    if(typeof responseLogin === 'object') {
-
-      setCookie(undefined, 'nextAuth.token', responseLogin.token, {
-        maxAge: 60 * 60 * 48, // 2 dias
-      });
-
-      setUser(responseLogin.userData);
-
-      redirect();
-
-      setLoading(false);
-
-      return true;
-      
     } else {
       setInvalid({
         isValidate: true,
-        message: responseLogin,
+        message: response,
       });
-      setLoading(false);
-
-      return false;
     }
-  }
 
-  async function register({ name, email, password, phone }: registerData) {
-    setLoading(true);
-
-    const responseRegister = await postRegister({ name, email, password, role: 'user', phone});
-
-    if(typeof responseRegister === 'object') {
-
-      setCookie(undefined, 'nextAuth.token', responseRegister.token, {
-        maxAge: 60 * 60 * 48, // 2 dias
-      });
-
-      setUser(responseRegister.userData);
-
-      redirect();
-
-      setLoading(false);
-
-      return true;
-
-    } else {
-      setInvalid({
-        isValidate: true,
-        message: responseRegister,
-      });
-
-      setLoading(false);
-
-      return false;
-    }
-  }
+    setLoading(false);
+    return typeof response === 'object';
+  };
 
   const context = {
-    singIn,
-    register,
-    user,
-    setUser,
+    postUser,
     invalid,
     setInvalid,
-    redirect,
     isLoading,
+    user,
+    token,
+    isFetching,
   };
 
   return (
