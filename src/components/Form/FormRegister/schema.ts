@@ -27,6 +27,19 @@ export const registerSchema = z.object({
   }).refine((value) => phoneRegex.test(value), {
     message: 'Siga o formato (20)999999999',
   }),
+  image: z.unknown()
+  .refine((value) => {
+    if (value instanceof FileList) {
+      const fileExtension = value[0].type.split('/').pop()?.toLowerCase();
+      if(!fileExtension) {
+        return false;
+      }
+      return ['jpg', 'jpeg', 'png'].includes(fileExtension);
+    }
+    return true; // Permite que o valor seja vazio ou outros tipos
+  }, {
+    message: 'O arquivo deve ser uma imagem',
+  }),
   role: z.unknown(),
 });
 
