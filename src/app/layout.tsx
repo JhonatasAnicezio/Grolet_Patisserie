@@ -1,8 +1,9 @@
+import './globals.css'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
-import './globals.css'
 import { Inter } from 'next/font/google'
 import { AuthProvider } from '@/context/AuthContext'
+import { QueryProvider } from '@/context/QueryContext'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,14 +18,16 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <AuthProvider>
-      <html lang="en">
-        <body className={inter.className}>
-          <Header />
-          {children}
-          <Footer />
-        </body>
-      </html>
-    </AuthProvider>
+    <QueryProvider>
+      <AuthProvider>
+        <html lang="en">
+          <body className={inter.className}>
+            <Header />
+            {children}
+            <Footer />
+          </body>
+        </html>
+      </AuthProvider>
+    </QueryProvider>
   )
 }
