@@ -25,7 +25,7 @@ export function FormRegister() {
   const createUser = async (data: registerData) => {
     reset();
     //@ts-ignore
-    await postUser(data, postRegister);
+    await postUser({...data, role: 'user'}, postRegister);
   };
 
   return (
@@ -92,7 +92,6 @@ export function FormRegister() {
             </Form.Label>
 
             {errors.password && <span className="text-red-500 text-xs">{errors.password.message}</span>}
-            {invalid.isValidate && <span className="text-red-500 text-xs">{invalid.message}</span>}
           </Form.Field>
 
           <Form.Input
@@ -101,6 +100,7 @@ export function FormRegister() {
             name='password'
             onClick={() => setInvalid({...invalid, isValidate: false})}
           />
+          {invalid.isValidate && <span className="text-red-500 text-xs">{invalid.message}</span>}
         </Form.Field>
 
         <button

@@ -61,7 +61,6 @@ export default function FormLogin({ setIsOpen }: propsLogin) {
             </Form.Label>
 
             {errors.password && <span className="text-red-500 text-xs">{errors.password.message}</span>}
-            {invalid.isValidate && <span className="text-red-500 text-xs">{invalid.message}</span>}
           </Form.Field>
 
           <Form.Input
@@ -70,6 +69,7 @@ export default function FormLogin({ setIsOpen }: propsLogin) {
             name='password'
             onClick={() => setInvalid({...invalid, isValidate: false})}
           />
+          {invalid.isValidate && <span className="text-red-500 text-xs">{invalid.message}</span>}
         </Form.Field>
 
         <button
