@@ -12,8 +12,6 @@ export async function postLogin({ email, password }: loginData) {
       }
     });
 
-  console.log(data);
-
   return data;
 }
 
