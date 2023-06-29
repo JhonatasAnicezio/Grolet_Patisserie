@@ -9,7 +9,7 @@ export function Header() {
     <header className="fixed top-0 left-0 w-full bg-white z-50">
       <div className="flex justify-between items-center text-xs px-16 py-1 bg-brown-350 text-white">
         <div className="flex gap-1 items-center">
-          <AiOutlinePhone/>
+          <AiOutlinePhone className="text-base"/>
           <p>LIGUE AGORA XXXX-XXXX</p>
         </div>
         <nav className="flex w-28 text-base justify-between">
