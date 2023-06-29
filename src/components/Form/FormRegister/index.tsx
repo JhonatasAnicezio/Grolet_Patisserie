@@ -6,9 +6,10 @@ import { Form } from "..";
 import { Modal } from "@/components/Modal";
 import { useContext, useState } from "react";
 import { AuthContext } from "@/context/AuthContext";
+import { postRegister } from "@/services/user";
 
 export function FormRegister() {
-  const { register, invalid, setInvalid, isLoading } = useContext(AuthContext);
+  const { postUser, invalid, setInvalid, isLoading } = useContext(AuthContext);
   const [isOpen, setIsOpen] = useState(false);
 
   const createRegisterForm = useForm<registerData>({
@@ -23,8 +24,8 @@ export function FormRegister() {
 
   const createUser = async (data: registerData) => {
     reset();
-    const result = await register(data);
-    console.log(result);
+    //@ts-ignore
+    await postUser(data, postRegister);
   };
 
   return (

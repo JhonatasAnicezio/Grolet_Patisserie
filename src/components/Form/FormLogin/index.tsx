@@ -6,13 +6,14 @@ import { Form } from '../index';
 import Link from 'next/link';
 import { useContext } from 'react';
 import { AuthContext } from '@/context/AuthContext';
+import { postLogin } from '@/services/user';
 
 interface propsLogin {
   setIsOpen: (value: boolean) => void,
 }
 
 export default function FormLogin({ setIsOpen }: propsLogin) {
-  const { singIn, invalid, setInvalid, isLoading } = useContext(AuthContext);
+  const { postUser, invalid, setInvalid, isLoading } = useContext(AuthContext);
 
   const createLoginForm = useForm<loginData>({
     resolver: zodResolver(loginSchema),
@@ -26,9 +27,9 @@ export default function FormLogin({ setIsOpen }: propsLogin) {
 
   const login = async (data: loginData) => {
     reset();
-    const result = await singIn(data);
+    const result = await postUser(data, postLogin);
     setIsOpen(!result);
-  }
+  };
 
   return (
     <FormProvider {...createLoginForm}>
