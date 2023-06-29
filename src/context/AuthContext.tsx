@@ -1,6 +1,6 @@
 'use client'
 import { ReactNode, createContext, useState } from 'react';
-import { setCookie, parseCookies } from 'nookies';
+import { setCookie, parseCookies, destroyCookie } from 'nookies';
 import { useRouter } from 'next/navigation';
 import { ResponsePost, User } from '@/interface/IUser';
 import { registerData } from '@/components/Form/FormRegister/schema';
@@ -46,9 +46,14 @@ export function AuthProvider({ children }: Prop) {
   const {'nextAuth.token': token} = parseCookies();
 
   const { data: user, isFetching } = useQuery(['profile', token], async () => {
-    const user = await getUser(token);
+    try {
+      const user = await getUser(token);
 
-    return user;
+      return user;
+    } catch (error) {
+      destroyCookie(null, 'nextAuth.token');
+      router.refresh();
+    }
   });
 
   const postUser = async (requestData: RequestData, action: Action) => {
