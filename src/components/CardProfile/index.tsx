@@ -26,7 +26,7 @@ export function CardProfile() {
           <p>{user?.phone}</p>
         </div>
       </div>
-      <div className="w-52 h-52 bg-gray-300 rounded-full" />
+      <div className="w-52 h-52 bg-cover rounded-full" style={{ backgroundImage: "url('/default-user-image.webp')" }} />
     </div>
   );
 }
