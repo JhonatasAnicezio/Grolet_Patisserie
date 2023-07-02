@@ -24,6 +24,7 @@ export function FormRegister() {
 
   const createUser = async (data: registerData) => {
     reset();
+    console.log(data);
     //@ts-ignore
     await postUser({...data, role: 'user'}, postRegister);
   };

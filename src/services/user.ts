@@ -22,11 +22,7 @@ export async function postLogin({ email, password }: loginData) {
 
 export async function postRegister(newUser: registerData) {
   try {
-    const { data } = await api.post<ResponsePost>('/', newUser, {
-      headers: {
-        'Content-Type': 'multipart/form-data',
-      },
-    })
+    const { data } = await api.post<ResponsePost>('/', newUser);
 
     return data;
   } catch (error) {
