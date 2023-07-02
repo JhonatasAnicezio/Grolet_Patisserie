@@ -27,6 +27,7 @@ export default function FormLogin({ setIsOpen }: propsLogin) {
 
   const login = async (data: loginData) => {
     reset();
+    //@ts-ignore
     const result = await postUser(data, postLogin);
     setIsOpen(!result);
   };

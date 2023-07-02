@@ -88,25 +88,6 @@ export function FormRegister() {
         <Form.Field className='w-full'>
           <Form.Field className='flex justify-between items-center'>
             <Form.Label>
-              Foto
-            </Form.Label>
-
-            {errors.image && <span className="text-red-500 text-xs">{errors.image.message}</span>}
-          </Form.Field>
-
-          <Form.Input
-            loading={isLoading}
-            type='file'
-            accept="image/*"
-            name='image'
-            className=""
-            onClick={() => setInvalid({...invalid, isValidate: false})}
-          />
-        </Form.Field>
-
-        <Form.Field className='w-full'>
-          <Form.Field className='flex justify-between items-center'>
-            <Form.Label>
               Senha
             </Form.Label>
 

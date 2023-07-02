@@ -15,7 +15,7 @@ type invalid = {
 
 type RequestData = registerData | loginData;
 
-type Action = (data: RequestData) => Promise<string | ResponsePost>;
+type Action = (data: RequestData) => Promise<ResponsePost>;
 
 interface AuthContext {
   postUser: (requestData: RequestData, action: Action) => Promise<boolean>,
@@ -59,22 +59,28 @@ export function AuthProvider({ children }: Prop) {
   const postUser = async (requestData: RequestData, action: Action) => {
     setLoading(true);
 
-    const response = await action(requestData);
+    try {
+      const response = await action(requestData);
 
-    if (typeof response === 'object') {
       setCookie(undefined, 'nextAuth.token', response.token, {
         maxAge: 60 * 60 * 48, // 2 dias
       });
+
       router.push('/');
-    } else {
+
+      return typeof response === 'object';
+
+    } catch (error) {
       setInvalid({
         isValidate: true,
-        message: response,
-      });
+        //@ts-ignore
+        message: `${error.message}`,
+      })
     }
 
     setLoading(false);
-    return typeof response === 'object';
+    
+    return false;
   };
 
   const context = {
