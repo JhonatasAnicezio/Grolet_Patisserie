@@ -1,4 +1,4 @@
-import { api } from './api';
+import { apiUser } from './api';
 import { AxiosResponse } from 'axios';
 import { loginData } from '@/components/Form/FormLogin/schema';
 import { registerData } from '@/components/Form/FormRegister/schema';
@@ -6,7 +6,7 @@ import { ResponsePost, User } from '@/interface/IUser';
 
 export async function postLogin({ email, password }: loginData) {
   try {
-    const { data } = await api.post<AxiosResponse>('/login', { email, password });
+    const { data } = await apiUser.post<AxiosResponse>('/login', { email, password });
 
     return data;
   } catch (error) {
@@ -22,7 +22,7 @@ export async function postLogin({ email, password }: loginData) {
 
 export async function postRegister(newUser: registerData) {
   try {
-    const { data } = await api.post<ResponsePost>('/', newUser);
+    const { data } = await apiUser.post<ResponsePost>('/', newUser);
 
     return data;
   } catch (error) {
@@ -38,7 +38,7 @@ export async function postRegister(newUser: registerData) {
 
 export async function getUser(token: string): Promise<User> {
   try {
-    const { data } = await api.get<User>('/me', {
+    const { data } = await apiUser.get<User>('/me', {
       headers: {
         'Authorization': token
       }
