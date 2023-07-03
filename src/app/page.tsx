@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center pt-[115px]">
       <div className="flex relative h-[500px]">
-        <img src="/Cedric.webp" alt="Descrição da imagem" className="w-9/12"/>
+        <img src="/Cedric.webp" alt="Descrição da imagem" className="w-9/12 bg-cover"/>
         <img src="/tartes.webp" alt="Descrição da imagem" className="w-1/4"/>
         <div className="bg-white text-brown-350 gap-28 rounded-tl-xl rounded-bl-lg h-64 w-[45%] p-9 absolute top-1/2 right-0 -translate-y-1/2">
           <h2 className="text-3xl w-10/12 py-1 border-b-2 border-brown-350">Saboreie a arte da confeitaria francesa em cada mordida</h2>
