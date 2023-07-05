@@ -16,7 +16,7 @@ export default async function Recipes() {
               <h2 className="py-2">{e.strMeal}</h2>
             </Link>
           </div>
-        ) )}
+        ))}
       </div>
     </main>
   )
