@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { AiOutlinePhone } from "react-icons/ai";
-import { FaInstagram, FaFacebookSquare, FaEnvelope } from "react-icons/fa";
+import { FaInstagram, FaFacebookSquare, FaLinkedin } from "react-icons/fa";
 import { LinkHeader } from "./components/link";
 import { Button } from "./components/button";
 
@@ -19,8 +19,8 @@ export function Header() {
           <Link target="blank" href='https://www.facebook.com/cedricgrolet'>
             <FaFacebookSquare className="transition duration-500 hover:text-blue-400" />
           </Link>
-          <Link target="blank" href='mailto:jhonatasanic@hotmail.com'>
-            <FaEnvelope className="transition duration-500 hover:text-red-400" />
+          <Link target="blank" href='https://www.linkedin.com/in/jhonatas-anicezio/'>
+            <FaLinkedin className="transition duration-500 hover:text-blue-500"/>
           </Link>
         </nav>
       </div>
