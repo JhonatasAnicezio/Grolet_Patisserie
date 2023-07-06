@@ -22,7 +22,6 @@ interface AuthContext {
   invalid: invalid,
   setInvalid: (value: invalid) => void,
   isLoading: boolean,
-  isFetching: boolean,
   user: User | undefined,
   token: string,
 }
@@ -45,7 +44,7 @@ export function AuthProvider({ children }: Prop) {
 
   const {'nextAuth.token': token} = parseCookies();
 
-  const { data: user, isFetching } = useQuery(['profile', token], async () => {
+  const { data: user } = useQuery(['profile', token], async () => {
     try {
       const user = await getUser(token);
 
@@ -67,6 +66,8 @@ export function AuthProvider({ children }: Prop) {
       });
 
       router.push('/');
+
+      setLoading(false);
 
       return typeof response === 'object';
 
@@ -90,7 +91,6 @@ export function AuthProvider({ children }: Prop) {
     isLoading,
     user,
     token,
-    isFetching,
   };
 
   return (
