@@ -1,4 +1,4 @@
-import { CardProfile } from "@/components/CardProfile";
+import { CardProfile } from "./components/CardProfile";
 
 export default function Profile() {
   return (
