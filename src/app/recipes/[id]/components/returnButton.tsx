@@ -1,5 +1,6 @@
 'use client'
 import { useRouter } from "next/navigation";
+import { BsArrowReturnLeft } from "react-icons/bs";
 
 export function ReturnButton() {
   const router = useRouter();
@@ -7,9 +8,10 @@ export function ReturnButton() {
   return (
     <button
       type="button"
+      className="flex items-center gap-1"
       onClick={ () => router.back() }
     >
-      {`<<RETURN`}
+      <BsArrowReturnLeft/> RETURN
     </button>
   );
 };
