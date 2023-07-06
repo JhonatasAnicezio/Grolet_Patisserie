@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const apiUser = axios.create({
-  baseURL: 'http://localhost:3001/user',
+  baseURL: 'https://api-patisserie-users.up.railway.app/user',
 });
 
 export const apiRecipes = axios.create({
