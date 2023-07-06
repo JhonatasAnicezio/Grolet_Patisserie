@@ -4,7 +4,7 @@ import { YouTubeEmbed } from "./components/youTubeEnbed";
 
 export default async function CurrentRecipe({ params }: { params: { id: string } }) {
 
-  const { strMeal, strInstructions, strMealThumb, strYoutube } = await getRecipeDetails(params.id);
+  const { strMeal, strInstructions, strMealThumb, strYoutube, ingredients, measures } = await getRecipeDetails(params.id);
 
   return (
     <main className="flex flex-col items-center gap-10 text-brown-350 pt-space-header">
@@ -15,8 +15,15 @@ export default async function CurrentRecipe({ params }: { params: { id: string }
         <h1 className="text-3xl w-full">{strMeal}</h1>
         <div className="flex w-full justify-between">
           <img src={strMealThumb} className="w-1/2" />
-          <div className="flex flex-col w-2/5">
-            <h2>INGREDIENTES</h2>
+          <div className="flex flex-col w-[45%]">
+            <h2 className="text-xl">INGREDIENTES</h2>
+            <ul className="flex flex-col flex-wrap list-disc px-10 py-3">
+              {ingredients.map((e, index) =>
+                <li key={index}>
+                  {`${measures[index]} ${e.toUpperCase()}`}
+                </li>
+              )}
+            </ul>
           </div>
         </div>
       </div>
