@@ -13,7 +13,7 @@ export default async function Recipes() {
           <div id={e.idMeal} key={index} className="flex flex-col justify-center w-[28%]">
             <Link href={`/recipes/${e.idMeal}`}>
               <img src={e.strMealThumb} className="w-full h-44 mb-3" />
-              <h2 className="py-2 text-black border-t border-brown-350">{e.strMeal}</h2>
+              <h2 className="py-2 w-full text-center border-t border-gray-400">{e.strMeal}</h2>
             </Link>
           </div>
         ))}
