@@ -36,7 +36,7 @@ export function Modal({ setIsOpen, isOpen }: propsModal) {
               leaveTo="opacity-0 scale-95"
             >
               <Dialog.Panel className="flex relative w-3/4 text-brown-350 h-banner transform overflow-hidden bg-white shadow-xl transition-all">
-                <img src="/croasaint.webp" className="h-full" />
+                <div className="h-full w-full bg-cover" style={{ backgroundImage: "url('/croasaint.webp')" }} />
                 <div className="flex items-center justify-center w-full">
                   <div className="flex flex-col items-center w-3/4">
                     <h1 className="text-4xl font-medium">Iniciar sessão</h1>
