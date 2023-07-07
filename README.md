@@ -7,6 +7,8 @@ O site também conta com diversas formas de contato, como um formulário de cont
 
 Em resumo, o projeto do site institucional da Grolet Patisserie proporciona uma experiência online completa, apresentando um hub de receitas para inspirar os visitantes, um cadastro de clientes para manter um relacionamento próximo e diversas opções de contato para uma comunicação eficiente. Tudo isso visando transmitir a excelência e a paixão da Grolet Patisserie em cada interação com seus clientes.
 
+![Site institucional GroletPatisserie](public/website.webp)
+
 
 ## Projeto já em deploy
 
