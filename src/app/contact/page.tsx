@@ -35,13 +35,13 @@ export default function Contact() {
             <div className="flex flex-col gap-1">
               <h2 className="text-2xl">Cedric Grolet®</h2>
               <nav className="flex flex-col text-xs">
-                <a className="flex items-center py-2 gap-1 border-b border-brown-350"><BsFillTelephoneFill />XXXX-XXX-XXX</a>
-                <a className="flex items-center py-2 gap-1 border-b border-brown-350"><BsFillEnvelopeFill />cedricgrolet@fake.com</a>
+                <a className="flex items-center py-2 gap-1 border-b border-brown-350"><BsFillTelephoneFill />(16)993052849</a>
+                <a className="flex items-center py-2 gap-1 border-b border-brown-350"><BsFillEnvelopeFill />jhonatasanic@hotmail.com</a>
                 <Link href='https://www.facebook.com/cedricgrolet' className="transition duration-500 flex items-center py-2 gap-1 hover:text-brown-900 border-b border-brown-350">
-                  <BsFacebook />Cedric Grolet
+                  <BsFacebook />Jhonatas Anicezio
                 </Link>
-                <Link href='https://www.instagram.com/cedricgrolet/' className="transition duration-500 flex items-center py-2 gap-1 hover:text-brown-900">
-                  <BsInstagram />@cedricgrolet
+                <Link href='https://www.instagram.com/_jhonatas_z/' className="transition duration-500 flex items-center py-2 gap-1 hover:text-brown-900">
+                  <BsInstagram />@jhonatasanicezio
                 </Link>
               </nav>
             </div>
