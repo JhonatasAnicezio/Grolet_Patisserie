@@ -1,4 +1,4 @@
-
+# Projeto em andamento...
 # GroletPatisserie
 
 O projeto do site institucional da Grolet Patisserie tem como principais destaques o hub de receitas, onde os visitantes podem explorar e se inspirar com uma variedade de deliciosas receitas exclusivas da patisserie. Além disso, o site oferece um cadastro de clientes, permitindo que os visitantes se inscrevam para receber atualizações, promoções e novidades da Grolet.
@@ -13,6 +13,7 @@ Em resumo, o projeto do site institucional da Grolet Patisserie proporciona uma 
 ## Projeto já em deploy
 
 https://grolet-patisserie.vercel.app/
+
 
 ## Tecnologias
 

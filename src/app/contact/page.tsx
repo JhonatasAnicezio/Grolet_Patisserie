@@ -33,7 +33,7 @@ export default function Contact() {
           <img className="w-40 h-40 rounded-full" src="/cedric-grolet.webp" alt="Descrição da imagem" />
           <div>
             <div className="flex flex-col gap-1">
-              <h2 className="text-2xl">Cedric Grolet®</h2>
+              <h2 className="text-2xl">Jhonatas Anicezio®</h2>
               <nav className="flex flex-col text-xs">
                 <a className="flex items-center py-2 gap-1 border-b border-brown-350"><BsFillTelephoneFill />(16)993052849</a>
                 <a className="flex items-center py-2 gap-1 border-b border-brown-350"><BsFillEnvelopeFill />jhonatasanic@hotmail.com</a>
