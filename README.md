@@ -12,6 +12,13 @@ Em resumo, o projeto do site institucional da Grolet Patisserie proporciona uma 
 
 https://grolet-patisserie.vercel.app/
 
+## Tecnologias
+
+- Next.js
+- TypeScript
+- Tailwind
+- React Query
+
 
 ## Funcionalidades
 
