@@ -7,12 +7,12 @@ import { Button } from "./components/button";
 export function Header() {
   return (
     <header className="fixed top-0 left-0 w-full bg-white z-50">
-      <div className="flex justify-between items-center text-xs px-16 py-1 bg-brown-350 text-white">
+      <div className="flex justify-between items-center text-xs px-16 max-sm:px-5 py-1 bg-brown-350 text-white">
         <div className="flex gap-1 items-center">
           <AiOutlinePhone className="text-base"/>
           <p>LIGUE AGORA XXXX-XXXX</p>
         </div>
-        <nav className="flex w-28 text-base justify-between">
+        <nav className="flex w-28 text-base justify-between max-sm:hidden">
           <Link target="blank" href='https://www.instagram.com/cedricgroletopera/'>
             <FaInstagram className="transition duration-500 hover:text-pink-500" />
           </Link>
@@ -25,11 +25,11 @@ export function Header() {
         </nav>
       </div>
       <div className="flex text-brown-350 p-3 justify-around">
-        <Link href='/'>
-          <h1 className="text-3xl font-medium pt-3">Grolet Patisserie</h1>
+        <Link href='/' className="max-sm:w-[60%]">
+          <h1 className="text-3xl max-sm:text-2xl font-medium pt-3">Grolet Patisserie</h1>
           <h2 className="text-xs font-medium">SABORES QUE ENCANTAM, MOMENTOS QUE FICAM</h2>
         </Link>
-        <nav className="flex gap-4 justify-between items-center font-medium text-xs text-gray-500">
+        <nav className="flex gap-4 justify-between max-sm:hidden items-center font-medium text-xs text-gray-500">
           <LinkHeader name="SOBRE" route="/about" />
           <LinkHeader name="RECEITAS" route="/recipes" />
           <LinkHeader name="PROCESSO" route="/process" />
