@@ -7,7 +7,7 @@ export default function About() {
       <div className="flex max-sm:flex-col-reverse py-16 max-sm:py-0 max-sm:pb-10 w-10/12 max-sm:w-full justify-evenly items-center">
         <img className="pt-10 w-1/2 max-sm:w-full h-[380px] max-sm:h-auto" src="/masterclass.webp" alt="Descrição da imagem" />
         <div className="flex flex-col w-2/5 max-sm:w-full gap-2 max-sm:bg-[#F7F7F5]">
-          <h1 className="text-4xl max-sm:pt-10 max-sm:px-4">Nossos confeiteros</h1>
+          <h1 className="text-4xl max-sm:pt-10 max-sm:px-4">Nossos confeiteiros</h1>
           <h3 className="text-sm font-medium max-sm:px-4 max-sm:pb-5">SOBRE CEDRIC E SEU TIME DE CONFEITEIROS</h3>
           <div className="flex flex-col gap-2 pt-3 max-sm:p-4 text-xs max-sm:bg-white">
             <p>Cedric Grolet lidera uma equipe de talentosos chefs confeiteiros apaixonados por criar obras-primas gastronômicas. Com habilidades e expertise únicas, cada membro da equipe contribui para a excelência e originalidade das criações da Grolet Patisserie. Dos habilidosos padeiros aos especialistas em decoração, cada um desempenha um papel fundamental na entrega de produtos que encantam os paladares e os olhos dos clientes.</p>
