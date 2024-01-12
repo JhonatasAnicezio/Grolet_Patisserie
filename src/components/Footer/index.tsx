@@ -29,7 +29,7 @@ export function Footer() {
             <Link href='/contact' className="py-0.5 transition duration-500 border-b border-white hover:text-brown-900 hover:border-brown-900">CONTATO</Link>
           </nav>
           <ul className="flex flex-col text-xs">
-            <li className="flex p-1 gap-1 items-center"><BsFillTelephoneFill />+55 (16)99305-2849</li>
+            <li className="flex p-1 gap-1 items-center"><BsFillTelephoneFill />+55 (16)992219948</li>
             <li className="flex p-1 gap-1 items-center"><BsFillEnvelopeFill />jhonatasanic@hotmail.com</li>
             <Link className="transition duration-500 hover:text-brown-900" target="blank" href='https://www.facebook.com/cedricgrolet'>
               <li className="flex p-1 gap-1 items-center"><BsFacebook />Cedric Grolet</li>

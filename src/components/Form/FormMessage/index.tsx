@@ -39,7 +39,7 @@ export default function FormMessage() {
     <FormProvider {...createSendForm}>
       <form
         onSubmit={handleSubmit(sendEmail)}
-        className='flex flex-col py-10 gap-3 max-sm:gap-0 justify-center items-center w-11/12 border'
+        className='flex flex-col py-10 gap-3 max-sm:gap-0 justify-center items-center w-11/12'
       >
         <Form.Field className='flex max-sm:flex-col gap-10 w-full justify-center'>
           <Form.Field className='w-2/5'>

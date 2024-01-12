@@ -35,7 +35,7 @@ export default function Contact() {
             <div className="flex flex-col gap-1">
               <h2 className="text-2xl">Jhonatas Anicezio®</h2>
               <nav className="flex flex-col text-xs">
-                <a className="flex items-center py-2 gap-1 border-b border-brown-350"><BsFillTelephoneFill />(16)993052849</a>
+                <a className="flex items-center py-2 gap-1 border-b border-brown-350"><BsFillTelephoneFill />(16)992219948</a>
                 <a className="flex items-center py-2 gap-1 border-b border-brown-350"><BsFillEnvelopeFill />jhonatasanic@hotmail.com</a>
                 <Link href='https://www.facebook.com/cedricgrolet' className="transition duration-500 flex items-center py-2 gap-1 hover:text-brown-900 border-b border-brown-350">
                   <BsFacebook />Jhonatas Anicezio
