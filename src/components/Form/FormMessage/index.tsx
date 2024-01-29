@@ -39,10 +39,10 @@ export default function FormMessage() {
     <FormProvider {...createSendForm}>
       <form
         onSubmit={handleSubmit(sendEmail)}
-        className='flex flex-col py-10 gap-3 max-sm:gap-0 justify-center items-center w-11/12'
+        className='flex flex-col py-10 gap-3 max-sm:gap-0 justify-center items-center w-11/12 max-sm:hidden'
       >
-        <Form.Field className='flex max-sm:flex-col gap-10 w-full justify-center'>
-          <Form.Field className='w-2/5'>
+        <Form.Field className='flex max-sm:flex-col gap-10 max-sm:gap-2 w-full justify-center max-sm:items-center'>
+          <Form.Field className='w-2/5 max-sm:w-11/12'>
             <Form.Field className='flex justify-between items-center'>
               <Form.Label>
                 Nome
@@ -54,8 +54,8 @@ export default function FormMessage() {
             <Form.Input loading={isLoading} type='name' name='name' />
           </Form.Field>
 
-          <Form.Field className='w-2/5'>
-            <Form.Field className='flex max-sm:flex-col justify-between items-center'>
+          <Form.Field className='w-2/5 max-sm:w-11/12'>
+            <Form.Field className='flex justify-between items-center'>
               <Form.Label>
                 Sobrenome
               </Form.Label>
@@ -67,8 +67,8 @@ export default function FormMessage() {
           </Form.Field>
         </Form.Field>
 
-        <Form.Field className='flex max-sm:flex-col gap-10 w-full justify-center'>
-          <Form.Field className='w-2/5'>
+        <Form.Field className='flex max-sm:flex-col gap-10 max-sm:gap-2 w-full justify-center max-sm:items-center'>
+          <Form.Field className='w-2/5 max-sm:w-11/12'>
             <Form.Field className='flex justify-between items-center'>
               <Form.Label>
                 Email
@@ -80,7 +80,7 @@ export default function FormMessage() {
             <Form.Input loading={isLoading} type='email' name='email' />
           </Form.Field>
 
-          <Form.Field className='w-2/5'>
+          <Form.Field className='w-2/5 max-sm:w-11/12'>
             <Form.Field className='flex justify-between items-center'>
               <Form.Label>
                 Celular
@@ -93,7 +93,7 @@ export default function FormMessage() {
           </Form.Field>
         </Form.Field>
 
-        <Form.Field className='flex flex-col w-10/12'>
+        <Form.Field className='flex flex-col w-10/12 max-sm:w-11/12 max-sm:pt-2'>
           <Form.Field className='flex justify-between items-center'>
             <Form.Label>
               Mensagem
@@ -105,7 +105,7 @@ export default function FormMessage() {
           <Form.Textarea loading={isLoading} name='message'/>
         </Form.Field>
 
-        <Form.Field className={`w-10/12 flex text-brown-350 ${sendSucefull ? 'justify-between' : 'justify-end'}`}>
+        <Form.Field className={`w-10/12 flex max-sm:pt-1 text-brown-350 ${sendSucefull ? 'justify-between' : 'justify-end'}`}>
           {sendSucefull && <p>Mensagem enviada com sucesso!</p>}
           <button
             type='submit'
