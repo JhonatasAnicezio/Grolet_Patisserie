@@ -10,10 +10,10 @@ export default function Contact() {
         <h2 className="text-sm text-brown-300 font-semibold">CONTATO COM O NOSSO TIME DE ATENDIMENTO</h2>
         <p className="text-xs px-20 max-sm:px-10">Está pronto para encomendar algo especial e exclusivo? Queremos ouvir suas ideias e transformá-las em realidade! Entre em contato conosco hoje mesmo e vamos trabalhar juntos para criar um pedido personalizado que atenda perfeitamente às suas expectativas.</p>
       </div>
-      <div className="flex max-sm:flex-col w-3/4 max-sm:w-full justify-between text-brown-350">
-        <div className="flex p-12 max-sm:p-2 gap-3">
+      <div className="flex max-lg:flex-col w-3/4 max-lg:w-full max-lg:items-center justify-between text-brown-350">
+        <div className="flex p-12 max-lg:w-full max-lg:justify-center max-sm:p-2 gap-3">
           <img className="w-40 max-sm:w-28 h-40 max-sm:h-28 rounded-full" src="/cedric-grolet.webp" alt="Descrição da imagem" />
-          <div>
+          <div className="max-lg:w-1/2">
             <div className="flex flex-col gap-1">
               <h2 className="text-2xl">Cedric Grolet®</h2>
               <nav className="flex flex-col text-xs">
@@ -29,9 +29,9 @@ export default function Contact() {
             </div>
           </div>
         </div>
-        <div className="flex p-12 max-sm:p-2 gap-3">
+        <div className="flex p-12 max-lg:w-full max-lg:justify-center max-sm:p-2 gap-3">
           <img className="w-40 max-sm:w-28 h-40 max-sm:h-28 rounded-full" src="/jhonatas.webp" alt="Descrição da imagem" />
-          <div>
+          <div className="max-lg:w-1/2">
             <div className="flex flex-col gap-1">
               <h2 className="text-2xl">Jhonatas Anicezio®</h2>
               <nav className="flex flex-col text-xs">
