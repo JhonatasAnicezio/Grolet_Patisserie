@@ -14,7 +14,8 @@ export function LinkHeader({ route, name }: propsLinkHeader) {
     <Link
       className={
         `transition duration-500 hover:text-brown-350 hover:border-b hover:border-brown-350
-        ${pathname === route && `text-brown-350 border-b border-brown-350`}`
+        ${pathname === route && `text-brown-350 border-b border-brown-350`}
+        max-[872px]:text-xl max-[872px]:border-none`
       }
       href={route}
     >

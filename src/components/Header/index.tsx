@@ -39,7 +39,17 @@ export function Header() {
           <Button />
         </nav>
         <Hamburguer />
-      </div>
+
+        </div>
+        <div className="w-full absolute bg-white border border-black right-0">
+          <nav className="flex flex-col gap-5 justify-between p-5 items-center font-medium text-xs text-gray-500">
+            <LinkHeader name="SOBRE" route="/about" />
+            <LinkHeader name="RECEITAS" route="/recipes" />
+            <LinkHeader name="PROCESSO" route="/process" />
+            <LinkHeader name="CONTATO" route="/contact" />
+            <Button />
+          </nav>
+        </div>
     </header>
   )
 }
