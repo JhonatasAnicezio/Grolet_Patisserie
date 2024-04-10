@@ -30,7 +30,7 @@ export default function Contact() {
           </div>
         </div>
         <div className="flex p-12 max-sm:p-2 gap-3">
-          <img className="w-40 max-sm:w-28 h-40 max-sm:h-28 rounded-full" src="/cedric-grolet.webp" alt="Descrição da imagem" />
+          <img className="w-40 max-sm:w-28 h-40 max-sm:h-28 rounded-full" src="/jhonatas.webp" alt="Descrição da imagem" />
           <div>
             <div className="flex flex-col gap-1">
               <h2 className="text-2xl">Jhonatas Anicezio®</h2>
