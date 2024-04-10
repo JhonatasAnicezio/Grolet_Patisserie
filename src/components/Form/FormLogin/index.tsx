@@ -80,7 +80,7 @@ export default function FormLogin({ setIsOpen }: propsLogin) {
         >
           {isLoading? 'Um momento...' : 'Iniciar sessão'}
         </button>
-        <Form.Field className='flex items-center gap-1 text-xs'>
+        <Form.Field className='flex max-sm:flex-col items-center gap-1 text-xs'>
           <p>Não possui uma conta ainda?</p>
           <Link
             href='/register'

@@ -5,8 +5,11 @@ import { FaInstagram, FaFacebookSquare, FaLinkedin } from "react-icons/fa";
 import { LinkHeader } from "./components/link";
 import { Button } from "./components/button";
 import { Hamburguer } from "../Hamburguer";
+import { useState } from "react";
 
 export function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <header className="fixed top-0 left-0 w-full bg-white z-50">
       <div className="flex justify-between items-center text-xs px-16 max-sm:px-5 py-1 bg-brown-350 text-white">
@@ -38,18 +41,21 @@ export function Header() {
           <LinkHeader name="CONTATO" route="/contact" />
           <Button />
         </nav>
-        <Hamburguer />
+
+        <Hamburguer isOpen={isOpen} setIsOpen={setIsOpen} />
 
         </div>
-        <div className="w-full absolute bg-white border border-black right-0">
-          <nav className="flex flex-col gap-5 justify-between p-5 items-center font-medium text-xs text-gray-500">
-            <LinkHeader name="SOBRE" route="/about" />
-            <LinkHeader name="RECEITAS" route="/recipes" />
-            <LinkHeader name="PROCESSO" route="/process" />
-            <LinkHeader name="CONTATO" route="/contact" />
-            <Button />
-          </nav>
-        </div>
+        {isOpen && 
+          <div className="w-full relative z-10 bg-white right-0">
+            <nav className="flex flex-col gap-5 justify-between p-5 items-center font-medium text-xs text-gray-500">
+              <LinkHeader name="SOBRE" route="/about" />
+              <LinkHeader name="RECEITAS" route="/recipes" />
+              <LinkHeader name="PROCESSO" route="/process" />
+              <LinkHeader name="CONTATO" route="/contact" />
+              <Button />
+            </nav>
+          </div>
+        }
     </header>
   )
 }

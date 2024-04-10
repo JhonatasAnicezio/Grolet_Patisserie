@@ -11,7 +11,7 @@ interface propsModal {
 export function Modal({ setIsOpen, isOpen }: propsModal) {
   return (
     <Transition appear show={isOpen} as={Fragment}>
-      <Dialog as="div" className="relative z-10" onClose={() => setIsOpen(!isOpen)}>
+      <Dialog as="div" className="relative z-50" onClose={() => setIsOpen(!isOpen)}>
         <Transition.Child
           as={Fragment}
           enter="ease-out duration-300"
@@ -35,8 +35,8 @@ export function Modal({ setIsOpen, isOpen }: propsModal) {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="flex relative w-3/4 text-brown-350 h-banner transform overflow-hidden bg-white shadow-xl transition-all">
-                <div className="h-full w-full bg-cover" style={{ backgroundImage: "url('/croasaint.webp')" }} />
+              <Dialog.Panel className="flex absolute w-3/4 max-[875px]:w-full text-brown-350 h-banner transform overflow-hidden bg-white shadow-xl transition-all">
+                <div className="h-full w-full bg-cover max-[875px]:hidden" style={{ backgroundImage: "url('/croasaint.webp')" }} />
                 <div className="flex items-center justify-center w-full">
                   <div className="flex flex-col items-center w-3/4">
                     <h1 className="text-4xl font-medium">Iniciar sessão</h1>
