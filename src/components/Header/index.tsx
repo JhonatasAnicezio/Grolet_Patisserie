@@ -41,7 +41,9 @@ export function Header() {
           <LinkHeader name="CONTATO" route="/contact" />
           <Button />
         </nav>
-        <Button />
+        <div className="flex min-[875px]:hidden">
+          <Button />
+        </div>
         <Hamburguer isOpen={isOpen} setIsOpen={setIsOpen} />
 
         </div>
