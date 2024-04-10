@@ -1,8 +1,10 @@
+'use client'
 import Link from "next/link";
 import { AiOutlinePhone } from "react-icons/ai";
 import { FaInstagram, FaFacebookSquare, FaLinkedin } from "react-icons/fa";
 import { LinkHeader } from "./components/link";
 import { Button } from "./components/button";
+import { Hamburguer } from "../Hamburguer";
 
 export function Header() {
   return (
@@ -36,6 +38,7 @@ export function Header() {
           <LinkHeader name="CONTATO" route="/contact" />
           <Button />
         </nav>
+        <Hamburguer />
       </div>
     </header>
   )
