@@ -4,9 +4,9 @@ import { BsFillTelephoneFill, BsFillEnvelopeFill, BsFacebook, BsInstagram } from
 export function Footer() {
   return (
     <footer className="flex flex-col items-center text-brown-350 relative">
-      <div className="flex max-sm:flex-col w-10/12 max-sm:w-full justify-center items-center py-36 max-sm:py-4 max-sm:pb-72 max-sm:bg-gradient-to-b max-sm:from-[#F7F7F5] max-sm:to-white">
-        <div className="flex flex-col w-2/4 max-sm:w-full gap-5 items-start max-sm:items-center max-sm:justify-center max-sm:text-center p-8 max-sm:px-4">
-          <h2 className="text-3xl max-sm:text-[22px] w-full py-2 border-b border-gray-400">Dedicado aos nossos clientes</h2>
+      <div className="flex max-lg:flex-col w-10/12 max-lg:w-full justify-center items-center py-36 max-lg:py-4 max-lg:pb-72 max-lg:bg-gradient-to-b max-lg:from-[#F7F7F5] max-lg:to-white">
+        <div className="flex flex-col w-2/4 max-lg:w-4/5 max-sm:w-full gap-5 items-start max-lg:items-center max-lg:justify-center max-lg:text-center p-8 max-lg:px-4">
+          <h2 className="text-3xl max-lg:text-[22px] w-full py-2 border-b border-gray-400">Dedicado aos nossos clientes</h2>
           <p className="text-xs font-normal">Como uma patisserie dedicada em criar experiências únicas, estamos comprometidos em fornecer a você, nosso cliente, resultados deliciosos e surpreendentes. Temos orgulho em trabalhar de perto com nossos clientes para entender suas preferências e necessidades culinárias, entregando resultados saborosos em cada criação.</p>
           <Link href='/about' className="transition duration-500 px-10 py-0.5 rounded-full text-sm bg-brown-350 text-white hover:bg-brown-900">
             SAIBA MAIS SOBRE NOSSA EQUIPE
@@ -14,14 +14,14 @@ export function Footer() {
         </div>
         <img src="/cedric-dedicated.webp" className="w-[480px] h-80 max-sm:p-8" />
       </div>
-      <div className="flex flex-col text-white max-sm:pt-20 py-28 max-sm:py-0 px-36 max-sm:px-8 justify-center items-center w-full bg-brown-350">
+      <div className="flex flex-col text-white max-lg:pt-20 py-28 max-sm:py-0 px-36 max-sm:px-8 justify-center items-center w-full bg-brown-350">
         <div className="w-full py-3 border-b border-white">
           <h2 className="text-3xl max-sm:text-xl font-medium">Grolet Patisserie</h2>
           <p className="text-sm max-sm:text-xs">SABORES QUE ENCANTAM, MOMENTOS QUE FICAM</p>
         </div>
-        <div className="flex max-sm:flex-col gap-5 py-5 min-h-[180px]">
-          <p className="text-xs w-1/2 max-sm:w-full">GroletPatisserie®  é uma patisserie de renome, oferecendo criações únicas e saborosas. Com um compromisso total com a excelência, estamos prontos para atender às suas necessidades de confeitaria. Seja você um apaixonado por doces ou um conhecedor exigente, conte com a GroletPatisserie®  para uma experiência gastronômica inesquecível.</p>
-          <nav className="flex flex-col font-medium text-xs flex-wrap w-1/5 max-sm:w-full max-h-[100px] gap-2">
+        <div className="flex max-lg:flex-col gap-5 py-5 min-h-[180px]">
+          <p className="text-xs w-1/2 max-lg:w-full">GroletPatisserie®  é uma patisserie de renome, oferecendo criações únicas e saborosas. Com um compromisso total com a excelência, estamos prontos para atender às suas necessidades de confeitaria. Seja você um apaixonado por doces ou um conhecedor exigente, conte com a GroletPatisserie®  para uma experiência gastronômica inesquecível.</p>
+          <nav className="flex flex-col font-medium text-xs flex-wrap w-1/5 max-lg:w-full max-h-[100px] gap-2">
             <Link href='/' className="py-0.5 transition duration-500 border-b border-white hover:text-brown-900 hover:border-brown-900">HOME</Link>
             <Link href='/about' className="py-0.5 transition duration-500 border-b border-white hover:text-brown-900 hover:border-brown-900">SOBRE</Link>
             <Link href='/process' className="py-0.5 transition duration-500 border-b border-white hover:text-brown-900 hover:border-brown-900">PROCESSO</Link>
