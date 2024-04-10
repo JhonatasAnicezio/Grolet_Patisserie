@@ -31,7 +31,7 @@ export function Header() {
       </div>
       <div className="flex text-brown-350 p-3 justify-around">
         <Link href='/' className="max-sm:w-[60%]">
-          <h1 className="text-3xl max-sm:text-2xl font-medium pt-3">Grolet Patisserie</h1>
+          <h1 className="text-3xl max-sm:text-xl font-medium pt-3">Grolet Patisserie</h1>
           <h2 className="text-xs font-medium">SABORES QUE ENCANTAM, MOMENTOS QUE FICAM</h2>
         </Link>
         <nav className="flex gap-4 justify-between max-[872px]:hidden items-center font-medium text-xs text-gray-500">
@@ -41,18 +41,17 @@ export function Header() {
           <LinkHeader name="CONTATO" route="/contact" />
           <Button />
         </nav>
-
+        <Button />
         <Hamburguer isOpen={isOpen} setIsOpen={setIsOpen} />
 
         </div>
         {isOpen && 
           <div className="w-full relative z-10 bg-white right-0">
             <nav className="flex flex-col gap-5 justify-between p-5 items-center font-medium text-xs text-gray-500">
-              <LinkHeader name="SOBRE" route="/about" />
-              <LinkHeader name="RECEITAS" route="/recipes" />
-              <LinkHeader name="PROCESSO" route="/process" />
-              <LinkHeader name="CONTATO" route="/contact" />
-              <Button />
+              <LinkHeader setIsOpen={setIsOpen} name="SOBRE" route="/about" />
+              <LinkHeader setIsOpen={setIsOpen} name="RECEITAS" route="/recipes" />
+              <LinkHeader setIsOpen={setIsOpen} name="PROCESSO" route="/process" />
+              <LinkHeader setIsOpen={setIsOpen} name="CONTATO" route="/contact" />
             </nav>
           </div>
         }

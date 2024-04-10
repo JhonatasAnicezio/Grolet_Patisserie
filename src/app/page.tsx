@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <main className="flex flex-col items-center pt-[115px]">
-        <div className="flex relative w-full h-[500px] max-sm:flex-col">
+        <div className="flex relative w-full h-[500px] min-[1200px]:h-[620px] max-sm:flex-col">
           <div className="w-9/12 max-sm:w-full h-full bg-cover" style={{ backgroundImage: "url('/Cedric.webp')" }}/>
           <div className="w-1/4 max-sm:w-full h-full bg-cover" style={{ backgroundImage: "url('/tartes.webp')" }}/>
           <div className="bg-white text-brown-350 gap-28 rounded-tl-xl max-sm:rounded-tl-2xl rounded-bl-xl max-sm:rounded-bl-2xl h-64 w-[45%] max-sm:w-[95%] p-9 absolute top-1/2 max-sm:top-[65%] right-0 -translate-y-1/2">

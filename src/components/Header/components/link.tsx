@@ -1,13 +1,15 @@
 'use client'
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { boolean } from 'zod';
 
 interface propsLinkHeader {
   name: string,
   route: string,
+  setIsOpen?: (value: boolean) => void,
 }
 
-export function LinkHeader({ route, name }: propsLinkHeader) {
+export function LinkHeader({ route, name, setIsOpen }: propsLinkHeader) {
   const pathname = usePathname();
 
   return (
@@ -18,6 +20,11 @@ export function LinkHeader({ route, name }: propsLinkHeader) {
         max-[872px]:text-xl max-[872px]:border-none`
       }
       href={route}
+      onClick={() => {
+        if (setIsOpen) {
+          setIsOpen(false);
+        }
+      }}
     >
       {name}
     </Link>
