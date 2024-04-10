@@ -32,7 +32,7 @@ export function FormRegister() {
     <FormProvider {...createRegisterForm}>
       <form
         onSubmit={handleSubmit(createUser)}
-        className="flex flex-col pb-20 gap-3 items-center w-7/12"
+        className="flex flex-col pb-20 gap-3 items-center w-7/12 min-[1200px]:w-2/4 max-[875px]:w-4/5"
       >
         <Form.Field className='w-full'>
           <Form.Field className='flex justify-between items-center'>
