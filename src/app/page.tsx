@@ -2,7 +2,6 @@ import { BsChatLeftDots, BsHouse } from "react-icons/bs";
 import { BiCake } from "react-icons/bi";
 import Link from "next/link";
 import { Testimonials } from "@/components/Testimonials";
-import { ModalAndamento } from "@/components/Modal/andamento";
 
 export default function Home() {
   return (
@@ -57,7 +56,6 @@ export default function Home() {
         </div>
         <Testimonials />
       </main>
-      <ModalAndamento />
     </>
   )
 }
