@@ -14,6 +14,11 @@ Em resumo, o projeto do site institucional da Grolet Patisserie proporciona uma 
 https://grolet-patisserie.vercel.app/
 
 
+## BackEnd do projeto
+
+https://github.com/JhonatasAnicezio/Back_Patisserie
+
+
 ## Tecnologias
 
 - Next.js
