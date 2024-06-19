@@ -1,7 +1,6 @@
 'use client'
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { boolean } from 'zod';
 
 interface propsLinkHeader {
   name: string,
