@@ -1,5 +1,6 @@
 'use client'
 import { Dialog, Transition } from "@headlessui/react";
+import Link from "next/link";
 import { Fragment, useState } from "react";
 import { AiFillWarning } from "react-icons/ai";
 
@@ -35,8 +36,13 @@ export function ModalAndamento() {
               <Dialog.Panel className="flex flex-col gap-2 rounded-xl items-center justify-center relative w-1/2 h-64 text-brown-350 transform overflow-hidden bg-white shadow-xl transition-all">
                 <AiFillWarning className="text-6xl text-yellow-600" />
                 <h2 className="text-3xl">Atenção!</h2>
-                <p className="text-center text-sm w-3/4">O back-end do projeto está hospedado em uma plataforma gratuita para deploy com limitação de tempo de uso, por isso existe a possibilidade do projeto não
-                estar funcionando o cadastro e login de usuários, para isso faça a clonagem do projeto pelo git-hub e rode o projeto localmente
+                <p className="text-center text-sm w-3/4">O BackEnd do projeto está sendo atualmente refeito para nest. O back atual do projeto foi todo feito em express e
+                 estava hospedado em uma plataforma para deploy de forma gratuita, mas foi excedido o uso e por conta disso decedi descontinuar e
+                 criar um novo backend melhor e mais escalavel para que tenha novas funcionalidades. Você pode acessar o backend antigo atraves desse link
+                 do github <span className="text-blue-700">
+                    <Link href='https://github.com/JhonatasAnicezio/Back_Patisserie' target="blank">
+                    github.com/Back_Patisserie</Link>
+                    </span>.
                 </p>
               </Dialog.Panel>
             </Transition.Child>
