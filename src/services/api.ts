@@ -1,7 +1,11 @@
 import axios from 'axios';
 
-export const apiUser = axios.create({
-  baseURL: 'http://localhost:3001/user',
+export const clients = axios.create({
+  baseURL: 'http://localhost:3000/clients',
+});
+
+export const authentication = axios.create({
+  baseURL: 'http://localhost:3000/authentication',
 });
 
 export const apiRecipes = axios.create({

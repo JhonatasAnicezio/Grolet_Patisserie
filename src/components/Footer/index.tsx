@@ -4,7 +4,7 @@ import { BsFillTelephoneFill, BsFillEnvelopeFill, BsFacebook, BsInstagram } from
 export function Footer() {
   return (
     <footer className="flex flex-col items-center text-brown-350 relative">
-      <div className="flex max-lg:flex-col w-10/12 max-lg:w-full justify-center items-center py-36 max-lg:py-4 max-lg:pb-72 max-lg:bg-gradient-to-b max-lg:from-[#F7F7F5] max-lg:to-white">
+      <div className="flex max-lg:flex-col w-[60%] max-lg:w-full justify-center items-center py-36 max-lg:py-4 max-lg:pb-72 max-lg:bg-gradient-to-b max-lg:from-[#F7F7F5] max-lg:to-white">
         <div className="flex flex-col w-2/4 max-lg:w-4/5 max-sm:w-full gap-5 items-start max-lg:items-center max-lg:justify-center max-lg:text-center p-8 max-lg:px-4">
           <h2 className="text-3xl max-lg:text-[22px] w-full py-2 border-b border-gray-400">Dedicado aos nossos clientes</h2>
           <p className="text-xs font-normal">Como uma patisserie dedicada em criar experiências únicas, estamos comprometidos em fornecer a você, nosso cliente, resultados deliciosos e surpreendentes. Temos orgulho em trabalhar de perto com nossos clientes para entender suas preferências e necessidades culinárias, entregando resultados saborosos em cada criação.</p>
@@ -40,7 +40,7 @@ export function Footer() {
           </ul>
         </div>
       </div>
-      <div className="flex flex-col gap-3 rounded-3xl items-center max-sm:text-center py-10 px-16 max-sm:px-10 border w-3/4 max-sm:w-[85%] text-brown-350 bg-white absolute top-[56%] max-sm:top-[56%] -translate-y-[56%] max-sm:-translate-y-[56%]">
+      <div className="flex flex-col gap-3 rounded-3xl items-center max-sm:text-center py-10 px-16 max-sm:px-10 border w-[60%] max-sm:w-[85%] text-brown-350 bg-white absolute top-[56%] max-sm:top-[56%] -translate-y-[56%] max-sm:-translate-y-[56%]">
         <h3 className="text-2xl">Nós estamos aqui para te ajudar</h3>
         <p className="text-center text-xs">Para garantir a comodidade de nossos clientes, a Grolet Patisserie disponibiliza um serviço de entrega ágil e eficiente em toda a cidade, com horários flexíveis e o cuidado necessário para que nossas delícias cheguem até você com a qualidade e o frescor que merece.</p>
         <div className="flex max-sm:flex-col text-xs text-center max-sm:items-center gap-2 w-full justify-around">

@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <main className="flex flex-col items-center pt-[115px]">
-        <div className="flex relative w-full h-[500px] min-[1200px]:h-[620px] max-sm:flex-col">
+        <div className="flex relative w-full h-[500px] min-[1200px]:h-[720px] max-sm:flex-col">
           <div className="w-9/12 max-sm:w-full h-full bg-cover" style={{ backgroundImage: "url('/Cedric.webp')" }}/>
           <div className="w-1/4 max-sm:w-full h-full bg-cover" style={{ backgroundImage: "url('/tartes.webp')" }}/>
           <div className="bg-white text-brown-350 gap-28 rounded-tl-xl max-sm:rounded-tl-2xl rounded-bl-xl max-sm:rounded-bl-2xl h-64 w-[45%] max-sm:w-[95%] p-9 absolute top-1/2 max-sm:top-[65%] right-0 -translate-y-1/2">
@@ -21,7 +21,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex justify-center w-full py-16">
+        <div className="flex justify-center w-[80%] py-16">
           <div className="flex-col flex gap-2 py-6 items-center justify-center rounded-3xl text-center w-3/4 max-sm:w-[90%] text-brown-350 border border-brown-350">
             <h2 className="text-3xl font-light max-sm:text-2xl">Gosta de cozinhar?</h2>
             <h3 className="text-sm max-sm:text-xs">Experimente nossos doces artesanais exclusivos hoje mesmo</h3>
@@ -31,7 +31,7 @@ export default function Home() {
           </div>
         </div>
         <div className="flex flex-col items-center justify-center max-sm:p-4 bg-cover w-full h-[430px] max-sm:h-full" style={{ backgroundImage: "url('/le-meurice-1.webp')" }}>
-          <div className="flex max-sm:flex-col p-8 max-sm:p-2 max-sm:py-6 text-center text-brown-350 rounded-3xl w-3/4 max-sm:w-[85%] justify-around bg-white">
+          <div className="flex max-sm:flex-col p-8 max-sm:p-2 max-sm:py-6 text-center text-brown-350 rounded-3xl w-[60%] max-sm:w-[85%] justify-around bg-white">
             <div className="flex gap-2 flex-col items-center w-1/3 max-sm:w-full">
               <div className="flex justify-center p-5 w-4/5 border-b border-brown-350">
                 <BsChatLeftDots className="text-3xl" />

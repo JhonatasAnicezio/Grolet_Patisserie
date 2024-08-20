@@ -69,6 +69,8 @@ export function AuthProvider({ children }: Prop) {
 
       setLoading(false);
 
+      router.refresh();
+
       return typeof response === 'object';
 
     } catch (error) {

@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-const phoneRegex = /^\(\d{2}\)\d{9}$/;
+const phoneRegex = /^\d+$/; // Apenas números
 
 export const registerSchema = z.object({
   name: z.string().nonempty({
@@ -25,7 +25,9 @@ export const registerSchema = z.object({
   phone: z.string().nonempty({
     message: 'O telefone é obrigatório',
   }).refine((value) => phoneRegex.test(value), {
-    message: 'Siga o formato (20)999999999',
+    message: 'O telefone deve conter apenas números',
+  }).refine((value) => value.length >= 9, {
+    message: 'O telefone deve ter no mínimo 9 caracteres',
   }),
   role: z.unknown(),
 });
