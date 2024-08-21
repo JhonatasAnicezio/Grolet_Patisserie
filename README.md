@@ -16,7 +16,7 @@ https://grolet-patisserie.vercel.app/
 
 ## BackEnd do projeto
 
-https://github.com/JhonatasAnicezio/Back_Patisserie
+https://github.com/JhonatasAnicezio/api_clients
 
 
 ## Tecnologias
