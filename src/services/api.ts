@@ -1,11 +1,11 @@
 import axios from 'axios';
 
 export const clients = axios.create({
-  baseURL: 'http://localhost:3000/clients',
+  baseURL: 'https://api-clients-c2d0.onrender.com/clients',
 });
 
 export const authentication = axios.create({
-  baseURL: 'http://localhost:3000/authentication',
+  baseURL: 'https://api-clients-c2d0.onrender.com/authentication',
 });
 
 export const apiRecipes = axios.create({
